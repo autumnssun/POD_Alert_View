@@ -8,9 +8,13 @@
 
 import Foundation
 import SnapKit
+import Material
 public class NN_Pop_Up_Core: UIView, NN_Modal {
     public var backgroundView = UIView()
     public var dialogView = UIView()
+    public var containerView = UIStackView()
+    public var textStacks = UIStackView()
+    public var btnStacks = UIStackView()
     
     public convenience init() {
         self.init(frame: UIScreen.main.bounds)

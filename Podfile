@@ -4,6 +4,7 @@ platform :ios, '11.0'
 def shared
   pod 'SnapKit'
   pod 'IQKeyboardManager'
+  pod 'Material'
 end
 
 target 'NN_Alert' do
