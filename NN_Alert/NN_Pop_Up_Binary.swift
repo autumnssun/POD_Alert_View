@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public class NN_PopUp_Binary:NN_Pop_Up_Icon{
+public class NN_Pop_Up_Binary:NN_Pop_Up_Icon{
     
     var actionBtnAction:Selector?
     var executioner:UIResponder?
@@ -19,8 +19,7 @@ public class NN_PopUp_Binary:NN_Pop_Up_Icon{
                             executioner:UIResponder,
                             executeBtnText:String? = nil,
                             executeAction:Selector? = nil,
-                            executeBtnStyle:BtnStyle? = .normal
-                            ) {
+                            executeBtnStyle:BtnStyle? = .normal) {
         self.init()
         self.setupIcon(image:image,animate:animate!)
         self.setupTitle(title:title,detail:detail)
@@ -35,7 +34,10 @@ public class NN_PopUp_Binary:NN_Pop_Up_Icon{
             let btn:UIButton = UIButton()
             btnStacks.addArrangedSubview(btn)
             btn.setTitle(text, for: .normal)
-            btn.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            btn.contentEdgeInsets = UIEdgeInsets(top: 10,
+                                                 left: 10,
+                                                 bottom: 10,
+                                                 right: 10)
             btn.addTarget(self, action: #selector(executeAction), for: .touchUpInside)
             btn.backgroundColor = Styles.shared.color.firstColor
         }

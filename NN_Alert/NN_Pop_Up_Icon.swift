@@ -27,22 +27,25 @@ public class NN_Pop_Up_Icon:NN_Pop_Up_Basic{
             btnStacks.addArrangedSubview(btn)
             btn.setTitle(btnLabel, for: .normal)
             btn.setTitleColor(Styles.shared.color.firstColor, for: .normal)
-            btn.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+            btn.contentEdgeInsets = UIEdgeInsets(top: 10,
+                                                 left: 10,
+                                                 bottom: 10,
+                                                 right: 10)
             btn.addTarget(self, action: #selector(OKBtnDidTapped), for: .touchUpInside)
         }
     }
     
     func setupIcon(image:UIImage?, animate:Bool){
         if let img = image {
-        containerView.insertArrangedSubview(imageView,at: 0)
-        imageView.image = img
-        imageView.snp.makeConstraints { (make) in
-            make.width.equalTo(img.width)
-            make.height.equalTo(img.height)
-        }
-        imageView.contentMode = .center
-        if animate{
-            self.rotateView(targetView:  imageView)
+            containerView.insertArrangedSubview(imageView,at: 0)
+            imageView.image = img
+            imageView.snp.makeConstraints { (make) in
+                make.width.equalTo(img.width)
+                make.height.equalTo(img.height)
+            }
+            imageView.contentMode = .center
+            if animate{
+                self.rotateView(targetView:  imageView)
             }
         }
     }

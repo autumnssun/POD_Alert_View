@@ -22,7 +22,8 @@
 		A917C9592183E49C0092D5FE /* NN_Pop_Up_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */; };
 		A917C95B218422250092D5FE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A917C95A218422250092D5FE /* Media.xcassets */; };
 		A9D0BD7121856D2D00C2E2DE /* NN_Pop_Up_Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */; };
-		A9D0BD732185D08C00C2E2DE /* NN_PopUp_Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0BD722185D08C00C2E2DE /* NN_PopUp_Binary.swift */; };
+		A9D0BD732185D08C00C2E2DE /* NN_Pop_Up_Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */; };
+		A9FED21E2187270A000D2D08 /* NN_Pop_Up_Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */; };
 		AA12CA1A71E3B42FADB724EC /* Pods_NN_Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E5488DB14FDFE09281345 /* Pods_NN_Alert.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +72,8 @@
 		A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Basic.swift; sourceTree = "<group>"; };
 		A917C95A218422250092D5FE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Icon.swift; sourceTree = "<group>"; };
-		A9D0BD722185D08C00C2E2DE /* NN_PopUp_Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_PopUp_Binary.swift; sourceTree = "<group>"; };
+		A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Binary.swift; sourceTree = "<group>"; };
+		A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Prompt.swift; sourceTree = "<group>"; };
 		EB3BD66DEC7EADE75C3B074E /* Pods-NN_Alert_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert_Demo/Pods-NN_Alert_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		F58AE43456BCF2B3CA8DF8E8 /* Pods_NN_Alert_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NN_Alert_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,7 +139,8 @@
 				3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */,
 				A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */,
 				A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */,
-				A9D0BD722185D08C00C2E2DE /* NN_PopUp_Binary.swift */,
+				A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */,
+				A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */,
 				3E942BD22182F6190058ED70 /* Tempura.swift */,
 				A917C95A218422250092D5FE /* Media.xcassets */,
 			);
@@ -351,8 +354,9 @@
 				3E942BCA2182E92C0058ED70 /* NN_Modal.swift in Sources */,
 				3E942BD32182F6190058ED70 /* Tempura.swift in Sources */,
 				A9D0BD7121856D2D00C2E2DE /* NN_Pop_Up_Icon.swift in Sources */,
+				A9FED21E2187270A000D2D08 /* NN_Pop_Up_Prompt.swift in Sources */,
 				A917C9592183E49C0092D5FE /* NN_Pop_Up_Basic.swift in Sources */,
-				A9D0BD732185D08C00C2E2DE /* NN_PopUp_Binary.swift in Sources */,
+				A9D0BD732185D08C00C2E2DE /* NN_Pop_Up_Binary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

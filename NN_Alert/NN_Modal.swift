@@ -30,11 +30,9 @@ public class Styles{
             detailFont: UIFont(name: "Avenir-Light", size: UIFont.systemFontSize)!)
     }
     
-    
     public struct NN_Alerts_Fonts{
         var titleFont:UIFont?
         var detailFont:UIFont?
-
     }
     
     public struct NN_Alerts_Sizes{
@@ -52,8 +50,6 @@ public class Styles{
     }
 }
 
-
-
 public protocol NN_Modal {
     func show(animated:Bool)
     func dismiss(animated:Bool)
@@ -62,7 +58,6 @@ public protocol NN_Modal {
     var containerView:UIStackView {get set}
     var textStacks:UIStackView {get set}
     var btnStacks:UIStackView {get set}
-
 }
 
 public extension NN_Modal where Self:UIView{
@@ -113,7 +108,6 @@ public extension NN_Modal where Self:UIView{
         addSubview(backgroundView)
         addSubview(dialogView)
         
-        
         backgroundView.frame = frame
         backgroundView.backgroundColor = UIColor.black
         backgroundView.alpha = 0.6
@@ -159,8 +153,6 @@ public extension NN_Modal where Self:UIView{
         btnStacks.addArrangedSubview(stretchingView)
 
     }
-    
-    
     
     func adjustViewWithKeyboard(_ notification:Notification){
         print(notification)

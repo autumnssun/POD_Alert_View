@@ -9,8 +9,6 @@
 import Foundation
 
 public class Tempura: NN_Pop_Up_Core{
-    
-    
     public convenience init(title:String) {
         self.init()
         self.setupTitle(title:title)

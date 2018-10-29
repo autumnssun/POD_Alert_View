@@ -19,7 +19,6 @@ public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
         titleLabel.numberOfLines = 0
         titleLabel.font = Styles.shared.fonts?.titleFont
         self.textStacks.addArrangedSubview(titleLabel)
-        
         if let d = detail {
             let detailLabel = UILabel()
             detailLabel.text = d
