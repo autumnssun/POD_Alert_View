@@ -168,7 +168,7 @@ public extension NN_Modal where Self:UIView{
     
     func rotateView(targetView: UIView, duration: Double = 0.5) {
         UIView.animate(withDuration: duration, delay: 0.0, options: .curveLinear, animations: {
-            targetView.transform = targetView.transform.rotated(by: CGFloat(M_PI))
+            targetView.transform = targetView.transform.rotated(by: .pi)
         }) { finished in
             self.rotateView(targetView: targetView, duration: duration)
         }
