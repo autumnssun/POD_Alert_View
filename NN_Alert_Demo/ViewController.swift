@@ -30,8 +30,7 @@ class ViewController: UIViewController {
                                     executioner:self,
                                     executeBtnText: "Confirm",
                                     executeAction: #selector(runsomething),
-                                    promptPlaceHolder:"placeholder",
-                                    promptPrefill:"iii")
+                                    promptPlaceHolder:"placeholder")
         alert.show(animated: true)
     }
     

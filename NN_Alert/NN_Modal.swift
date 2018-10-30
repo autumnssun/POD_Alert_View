@@ -39,7 +39,7 @@ public class Styles{
         var paddings:CGFloat = 16
         var boxPadding:CGFloat = 5
     }
-
+    
     public struct NN_Alerts_Colors{
         var buttonTextColorLight:UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         var buttonTextColorDark:UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -55,9 +55,9 @@ public protocol NN_Modal {
     func dismiss(animated:Bool)
     var backgroundView:UIView {get}
     var dialogView:UIView {get set}
-    var containerView:UIStackView {get set}
     var textStacks:UIStackView {get set}
     var btnStacks:UIStackView {get set}
+    var containerView:UIStackView {get set}
 }
 
 public extension NN_Modal where Self:UIView{
@@ -69,8 +69,13 @@ public extension NN_Modal where Self:UIView{
             UIView.animate(withDuration: 0.33, animations: {
                 self.backgroundView.alpha = 0.66
             })
-            UIView.animate(withDuration: 0.33, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 10, options: UIView.AnimationOptions(rawValue: 0), animations: {
-                self.dialogView.center  = self.center
+            UIView.animate(withDuration: 0.33,
+                           delay: 0,
+                           usingSpringWithDamping: 0.7,
+                           initialSpringVelocity: 10,
+                           options: UIView.AnimationOptions(rawValue: 0),
+                           animations: {
+                            self.dialogView.center  = self.center
             }, completion: { (completed) in
                 
             })
@@ -100,7 +105,6 @@ public extension NN_Modal where Self:UIView{
     func setUpKeyboardManager(view:UIView,keyboardWillDisappearSelector:Selector,keyboardWillAppearSelector:Selector){
         NotificationCenter.default.addObserver(view, selector: keyboardWillDisappearSelector, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(view, selector: keyboardWillAppearSelector, name: UIResponder.keyboardWillShowNotification, object: nil)
-
     }
     
     
@@ -122,24 +126,35 @@ public extension NN_Modal where Self:UIView{
             make.centerY.equalToSuperview().offset(Styles.shared.sizes.paddings)
             make.height.greaterThanOrEqualTo(100)
             make.width.equalToSuperview().inset(Styles.shared.sizes.paddings)
-            make.width.greaterThanOrEqualTo(200)
+            make.width.lessThanOrEqualTo(500)
         }
         
         let wrapperStack = UIStackView()
-        wrapperStack.axis = .vertical
-        wrapperStack.spacing = Styles.shared.sizes.boxPadding*2
-        wrapperStack.addArrangedSubview(containerView)
-        wrapperStack.addArrangedSubview(btnStacks)
+        
         dialogView.addSubview(wrapperStack)
         wrapperStack.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.width.equalToSuperview().inset(Styles.shared.sizes.paddings)
             make.height.equalToSuperview().inset(Styles.shared.sizes.paddings)
         }
-       
+        wrapperStack.axis = .vertical
+        wrapperStack.spacing = Styles.shared.sizes.boxPadding*2
+//        wrapperStack.setCon tentHuggingPriority(UILayoutPriority.init(1), for:.vertical)
+        wrapperStack.addArrangedSubview(containerView)
+        wrapperStack.addArrangedSubview(btnStacks)
+
+        containerView.axis = .horizontal
+        containerView.spacing = Styles.shared.sizes.boxPadding
         containerView.addArrangedSubview(textStacks)
+        containerView.alignment = .top
+//        containerView.setContentHuggingPriority(UILayoutPriority.init(1), for:.horizontal)
+
+
+        
         textStacks.axis = .vertical
         textStacks.spacing = Styles.shared.sizes.boxPadding
+        textStacks.distribution = .equalSpacing
+        textStacks.setContentHuggingPriority(UILayoutPriority.init(1), for:.vertical)
         
         btnStacks.axis = .horizontal
         btnStacks.alignment = .bottom
@@ -151,7 +166,7 @@ public extension NN_Modal where Self:UIView{
         stretchingView.backgroundColor = .clear
         stretchingView.translatesAutoresizingMaskIntoConstraints = false
         btnStacks.addArrangedSubview(stretchingView)
-
+        
     }
     
     func adjustViewWithKeyboard(_ notification:Notification){

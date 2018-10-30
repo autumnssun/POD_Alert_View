@@ -22,19 +22,15 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary{
                             executeBtnStyle:BtnStyle? = .normal,
                             promptPlaceHolder:String? = nil,
                             promptPrefill:String? = nil) {
-        self.init()
-        self.setupIcon(image:image,animate:animate!)
-        self.setupTitle(title:title,detail:detail)
-        self.setupBtn(netralBtnText: netralBtnText)
-        self.actionBtnAction = executeAction
-        self.executioner = executioner
-        self.setupActionbtn(executeBtnText:executeBtnText)
+        self.init(title: title, detail: detail, image: image, animate: animate, netralBtnText: netralBtnText, executioner: executioner, executeBtnText: executeBtnText, executeAction: executeAction, executeBtnStyle: executeBtnStyle)
         self.setupPrompt(promptPlaceHolder: promptPlaceHolder, promptPrefill: promptPrefill)
     }
     
     func setupPrompt(promptPlaceHolder:String?, promptPrefill:String?){
         promptTextField.text = promptPrefill
+        promptTextField.placeholderVerticalOffset = 6
+        promptTextField.placeholderActiveScale = 0.5
         promptTextField.placeholder = promptPlaceHolder
-        textStacks.addArrangedSubview(promptTextField)
+        self.textStacks.addArrangedSubview(promptTextField)
     }
 }
