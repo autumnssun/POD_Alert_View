@@ -21,6 +21,9 @@
 		94A779BF730D123D8D01E9EA /* Pods_NN_Alert_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58AE43456BCF2B3CA8DF8E8 /* Pods_NN_Alert_Demo.framework */; };
 		A917C9592183E49C0092D5FE /* NN_Pop_Up_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */; };
 		A917C95B218422250092D5FE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A917C95A218422250092D5FE /* Media.xcassets */; };
+		A96A0F32218DA16D0097AAE8 /* NN_Progress_Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */; };
+		A9877E39218E9D2100E797AE /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9877E37218E9D2100E797AE /* UIFont+Additions.swift */; };
+		A9877E3A218E9D2100E797AE /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9877E38218E9D2100E797AE /* UIColor+Additions.swift */; };
 		A9D0BD7121856D2D00C2E2DE /* NN_Pop_Up_Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */; };
 		A9D0BD732185D08C00C2E2DE /* NN_Pop_Up_Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */; };
 		A9FED21E2187270A000D2D08 /* NN_Pop_Up_Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */; };
@@ -71,6 +74,9 @@
 		9A8E5488DB14FDFE09281345 /* Pods_NN_Alert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NN_Alert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Basic.swift; sourceTree = "<group>"; };
 		A917C95A218422250092D5FE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Progress_Steps.swift; sourceTree = "<group>"; };
+		A9877E37218E9D2100E797AE /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
+		A9877E38218E9D2100E797AE /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Icon.swift; sourceTree = "<group>"; };
 		A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Binary.swift; sourceTree = "<group>"; };
 		A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Prompt.swift; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 		3E44A7872182E7BD009DCED7 /* NN_Alert */ = {
 			isa = PBXGroup;
 			children = (
+				A9877E38218E9D2100E797AE /* UIColor+Additions.swift */,
+				A9877E37218E9D2100E797AE /* UIFont+Additions.swift */,
 				3E44A7882182E7BD009DCED7 /* NN_Alert.h */,
 				3E44A7892182E7BD009DCED7 /* Info.plist */,
 				3E942BC92182E92C0058ED70 /* NN_Modal.swift */,
@@ -141,6 +149,7 @@
 				A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */,
 				A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */,
 				A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */,
+				A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */,
 				3E942BD22182F6190058ED70 /* Tempura.swift */,
 				A917C95A218422250092D5FE /* Media.xcassets */,
 			);
@@ -350,6 +359,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96A0F32218DA16D0097AAE8 /* NN_Progress_Steps.swift in Sources */,
+				A9877E3A218E9D2100E797AE /* UIColor+Additions.swift in Sources */,
+				A9877E39218E9D2100E797AE /* UIFont+Additions.swift in Sources */,
 				3E942BCC2182E9930058ED70 /* NN_Pop_Up_Core.swift in Sources */,
 				3E942BCA2182E92C0058ED70 /* NN_Modal.swift in Sources */,
 				3E942BD32182F6190058ED70 /* Tempura.swift in Sources */,

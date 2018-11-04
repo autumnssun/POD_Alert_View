@@ -12,11 +12,11 @@ public class NN_Pop_Up_Binary:NN_Pop_Up_Icon{
     var actionBtnAction:Selector?
     var executioner:UIResponder?
     public convenience init(title:String,
-                            detail:String?,
+                            detail:String? = nil,
                             image:UIImage? = nil,
                             animate:Bool? = false,
                             netralBtnText:String? = nil,
-                            executioner:UIResponder,
+                            executioner:UIResponder? = nil,
                             executeBtnText:String? = nil,
                             executeAction:Selector? = nil,
                             executeBtnStyle:BtnStyle? = .normal) {

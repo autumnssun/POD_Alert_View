@@ -11,7 +11,7 @@ import Foundation
 public class NN_Pop_Up_Icon:NN_Pop_Up_Basic{
     var imageView = UIImageView()
     public convenience init(title:String,
-                            detail:String?,
+                            detail:String? = nil,
                             image:UIImage? = nil,
                             animate:Bool? = false,
                             netralBtnText:String? = nil) {

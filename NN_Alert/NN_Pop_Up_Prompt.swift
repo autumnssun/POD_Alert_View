@@ -16,7 +16,7 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary{
                             image:UIImage? = nil,
                             animate:Bool? = false,
                             netralBtnText:String? = nil,
-                            executioner:UIResponder,
+                            executioner:UIResponder? = nil,
                             executeBtnText:String? = nil,
                             executeAction:Selector? = nil,
                             executeBtnStyle:BtnStyle? = .normal,

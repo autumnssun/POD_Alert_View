@@ -9,7 +9,7 @@
 import Foundation
 import Material
 public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
-    public convenience init(title:String,detail:String?) {
+    public convenience init(title:String,detail:String? = nil) {
         self.init()
         self.setupTitle(title:title,detail:detail)
     }
