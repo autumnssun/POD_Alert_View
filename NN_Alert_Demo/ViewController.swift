@@ -46,8 +46,10 @@ class ViewController: UIViewController {
         alert.show(animated: true)
     }
     
-    @objc func runsomething(){
-        print("i am runing this")
+    @objc func runsomething(text:Any){
+        if let str = text as? String{
+            print(str)
+        }
         alert_2(self)
     }
     
