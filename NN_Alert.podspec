@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NN_Alert'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of NN_Alert_Views.'
+  s.version          = '0.0.1'
+  s.summary          = 'A unifined alert views mimicking material design diaglog.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
