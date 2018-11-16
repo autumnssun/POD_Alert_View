@@ -18,41 +18,77 @@ public enum BtnStyle{
     case normal
 }
 
-public class Styles{
-    static let shared = Styles()
-    var fonts : NN_Alerts_Fonts?
-    var sizes = NN_Alerts_Sizes()
-    var color = NN_Alerts_Colors()
+public class NN_Alert_Manager{
+    public static let shared = NN_Alert_Manager()
+    public var style:NN_Styles!
+    init(style:NN_Styles!=NN_Styles()) {
+        self.style = style!
+    }
+}
+
+
+public struct NN_Styles{
+    public var fonts: NN_Alerts_Fonts
+    public var sizes: NN_Alerts_Sizes
+    public var colors: NN_Alerts_Colors
     
-    init(fontSet:NN_Alerts_Fonts? = nil , sizeSet:NN_Alerts_Sizes? = nil) {
-        self.fonts = NN_Alerts_Fonts(
-            titleFont: UIFont(name: "Avenir-Heavy", size: UIFont.labelFontSize)!,
-            detailFont: UIFont(name: "Avenir-Light", size: UIFont.systemFontSize)!)
+    public init(colorSets:NN_Alerts_Colors? = NN_Alerts_Colors(),
+         fontSets:NN_Alerts_Fonts? = NN_Alerts_Fonts(),
+         sizeSets:NN_Alerts_Sizes? = NN_Alerts_Sizes()) {
+        self.fonts = fontSets!
+        self.colors = colorSets!
+        self.sizes = sizeSets!
     }
     
     public struct NN_Alerts_Fonts{
-        var titleFont:UIFont?
-        var detailFont:UIFont?
+        var titleFont:UIFont
+        var detailFont:UIFont
+        var buttonFont:UIFont
+        public init(titleFont:UIFont? = UIFont(name: "Avenir-Heavy", size: UIFont.labelFontSize)!,
+            detailFont:UIFont? = UIFont(name: "Avenir-Light", size: UIFont.systemFontSize)!){
+            self.titleFont = titleFont!
+            self.detailFont = detailFont!
+            self.buttonFont = titleFont!
+        }
     }
     
     public struct NN_Alerts_Sizes{
-        var paddings:CGFloat = 16
-        var boxPadding:CGFloat = 5
+        var paddings:CGFloat
+        var boxPadding:CGFloat
+        public init(padding:CGFloat? = 16, boxPadding:CGFloat? = 5){
+            self.paddings = padding!
+            self.boxPadding = boxPadding!
+        }
     }
     
     public struct NN_Alerts_Colors{
-        var buttonTextColorLight:UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        var buttonTextColorDark:UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        var firstColor:UIColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        var secondColor:UIColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        var thirdColor:UIColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        var fourColor:UIColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        var buttonTextColorLight:UIColor
+        var buttonTextColorDark:UIColor
+        var firstColor:UIColor
+        var secondColor:UIColor
+        var thirdColor:UIColor
+        var fourColor:UIColor
+        public init(textLight:UIColor? = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0),
+                    textDark:UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                    firstColor:UIColor? = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1),
+                    secondColor:UIColor? = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1),
+                    thirdColor:UIColor? = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
+                    fourColor:UIColor? = #colorLiteral(red: 0.87843137254, green:0.02745098039, blue: 0.02745098039, alpha: 1)) {
+            self.buttonTextColorLight = textLight!
+            self.buttonTextColorDark = textDark!
+            self.firstColor = firstColor!
+            self.secondColor = secondColor!
+            self.thirdColor = thirdColor!
+            self.fourColor = thirdColor!
+        }
     }
 }
 
 public protocol NN_Modal {
-    func show(animated:Bool)
+    func show(animated:Bool,timeOutDuration:TimeInterval?)
+    func show_animated_timeOut()
     func dismiss(animated:Bool)
+    var settings:NN_Styles{get set}
     var backgroundView:UIView {get}
     var dialogView:UIView {get set}
     var textStacks:UIStackView {get set}
@@ -72,7 +108,11 @@ public extension UIView{
 }
 
 public extension NN_Modal where Self:UIView{
-    public func show(animated:Bool){
+ 
+    public func show_animated_timeOut(){
+        self.show(animated: true,timeOutDuration: 5)
+    }
+    public func show(animated:Bool,timeOutDuration:TimeInterval? = nil){
         self.backgroundView.alpha = 0
         self.dialogView.center = CGPoint(x: self.center.x, y: self.frame.height + self.dialogView.frame.height/2)
         UIApplication.shared.delegate?.window??.rootViewController?.view.addSubview(self)
@@ -93,6 +133,12 @@ public extension NN_Modal where Self:UIView{
         }else{
             self.backgroundView.alpha = 0.66
             self.dialogView.center  = self.center
+        }
+        
+        if let waitDuration = timeOutDuration{
+            Timer.scheduledTimer(withTimeInterval: waitDuration, repeats: false) { (timer) in
+                self.dismiss(animated: true)
+            }
         }
     }
     
@@ -134,9 +180,9 @@ public extension NN_Modal where Self:UIView{
         
         dialogView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(Styles.shared.sizes.paddings)
+            make.centerY.equalToSuperview().offset(self.settings.sizes.paddings)
             make.height.greaterThanOrEqualTo(100)
-            make.width.equalToSuperview().inset(Styles.shared.sizes.paddings)
+            make.width.equalToSuperview().inset(self.settings.sizes.paddings)
             make.width.lessThanOrEqualTo(500)
         }
         
@@ -145,29 +191,29 @@ public extension NN_Modal where Self:UIView{
         dialogView.addSubview(wrapperStack)
         wrapperStack.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
-            make.width.equalToSuperview().inset(Styles.shared.sizes.paddings)
-            make.height.equalToSuperview().inset(Styles.shared.sizes.paddings)
+            make.width.equalToSuperview().inset(self.settings.sizes.paddings)
+            make.height.equalToSuperview().inset(self.settings.sizes.paddings)
         }
         wrapperStack.axis = .vertical
-        wrapperStack.spacing = Styles.shared.sizes.boxPadding*2
+        wrapperStack.spacing = self.settings.sizes.boxPadding*2
         wrapperStack.addArrangedSubview(containerView)
         wrapperStack.addArrangedSubview(btnStacks)
 
         containerView.axis = .horizontal
-        containerView.spacing = Styles.shared.sizes.boxPadding
+        containerView.spacing = self.settings.sizes.boxPadding
         containerView.addArrangedSubview(textStacks)
         containerView.alignment = .top
 
 
         
         textStacks.axis = .vertical
-        textStacks.spacing = Styles.shared.sizes.boxPadding
+        textStacks.spacing = self.settings.sizes.boxPadding
         textStacks.distribution = .equalSpacing
         textStacks.setContentHuggingPriority(UILayoutPriority.init(1), for:.vertical)
         
         btnStacks.axis = .horizontal
         btnStacks.alignment = .bottom
-        btnStacks.spacing = Styles.shared.sizes.boxPadding
+        btnStacks.spacing = self.settings.sizes.boxPadding
         btnStacks.distribution = .fill
         
         let stretchingView = UIView()

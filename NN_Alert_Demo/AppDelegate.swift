@@ -8,6 +8,7 @@
 
 import UIKit
 import IQKeyboardManager
+import NN_Alert
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        NN_Alert_Manager.shared.style = NN_Styles(colorSets: NN_Styles.NN_Alerts_Colors(textLight: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), textDark: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1),firstColor:#colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)),fontSets:NN_Styles.NN_Alerts_Fonts(titleFont: UIFont(name: "SnellRoundhand-Bold", size: UIFont.labelFontSize), detailFont: UIFont(name: "ChalkboardSE-Regular", size: UIFont.systemFontSize)))
         return true
     }
 

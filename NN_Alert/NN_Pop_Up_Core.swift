@@ -10,6 +10,8 @@ import Foundation
 import SnapKit
 import Material
 public class NN_Pop_Up_Core: UIView, NN_Modal {
+
+    public var settings:NN_Styles = NN_Alert_Manager.shared.style
     public var backgroundView = UIView()
     public var dialogView = UIView()
     public var containerView = UIStackView()

@@ -55,7 +55,7 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary{
                                                  bottom: 10,
                                                  right: 10)
             btn.addTarget(self, action: #selector(executePromptAction), for: .touchUpInside)
-            btn.backgroundColor = Styles.shared.color.firstColor
+            btn.backgroundColor = self.settings.colors.firstColor
         }
     }
 

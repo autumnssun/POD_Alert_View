@@ -17,13 +17,15 @@ public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
         let titleLabel = UILabel()
         titleLabel.text = title
         titleLabel.numberOfLines = 0
-        titleLabel.font = Styles.shared.fonts?.titleFont
+        titleLabel.font = self.settings.fonts.titleFont
+        titleLabel.textColor = self.settings.colors.buttonTextColorDark
         self.textStacks.addArrangedSubview(titleLabel)
         if let d = detail {
             let detailLabel = UILabel()
             detailLabel.text = d
             detailLabel.numberOfLines = 0
-            detailLabel.font = Styles.shared.fonts?.detailFont
+            detailLabel.font = self.settings.fonts.detailFont
+            detailLabel.textColor = self.settings.colors.buttonTextColorDark
             self.textStacks.addArrangedSubview(detailLabel)
         }
     }

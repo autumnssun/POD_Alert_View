@@ -26,7 +26,8 @@ public class NN_Pop_Up_Icon:NN_Pop_Up_Basic{
             let btn:UIButton = UIButton()
             btnStacks.addArrangedSubview(btn)
             btn.setTitle(btnLabel, for: .normal)
-            btn.setTitleColor(Styles.shared.color.firstColor, for: .normal)
+            btn.setTitleColor(self.settings.colors.buttonTextColorLight, for: .normal)
+            btn.backgroundColor = self.settings.colors.secondColor
             btn.contentEdgeInsets = UIEdgeInsets(top: 10,
                                                  left: 10,
                                                  bottom: 10,

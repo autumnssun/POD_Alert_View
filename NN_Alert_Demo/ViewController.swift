@@ -19,10 +19,12 @@ class ViewController: UIViewController {
                                    image: #imageLiteral(resourceName: "loading"),
                                    animate: true,
                                    netralBtnText:"OK")
-        alert.show(animated: true)
+        alert.show_animated_timeOut()
     }
 
     @IBAction func alert_1(_ sender: Any) {
+        
+        
         let alert = NN_Pop_Up_Prompt(title: "Prompt alert",
                                     detail: "this is a prompt alert",
                                     image: #imageLiteral(resourceName: "warning"),
@@ -77,7 +79,6 @@ class ViewController: UIViewController {
     @objc func fireTimer(timer:Timer) {
         if let userInfo = timer.userInfo as? (steps:[Step],alert:NN_Progress_Steps){
             let steps = userInfo.steps
-            print(steps[0].status)
             if steps[1].status == .working{
                 steps[1].changeStatus(status: .success, updatedLabel: "done yay")
                 timer.invalidate()
