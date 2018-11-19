@@ -13,6 +13,9 @@
 		3E8AB08E21A2495F00B29F61 /* NN_Alert_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */; };
 		3E8AB09021A26AFB00B29F61 /* NN_Pop_Up_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */; };
 		3E8AB09221A26D8000B29F61 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AB09121A26D8000B29F61 /* Media.xcassets */; };
+		3E8AB09421A27FD500B29F61 /* NN_ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09321A27FD500B29F61 /* NN_ActionSheet.swift */; };
+		3E8AB09621A283F000B29F61 /* NN_Action_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09521A283F000B29F61 /* NN_Action_Button.swift */; };
+		3E8AB09A21A28D3B00B29F61 /* NN_ActionSheet_Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Core.swift */; };
 		3E942B9E2182E8370058ED70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942B9D2182E8370058ED70 /* AppDelegate.swift */; };
 		3E942BA02182E8370058ED70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942B9F2182E8370058ED70 /* ViewController.swift */; };
 		3E942BA32182E8370058ED70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E942BA12182E8370058ED70 /* Main.storyboard */; };
@@ -68,6 +71,9 @@
 		3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Alert_Button.swift; sourceTree = "<group>"; };
 		3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Alert.swift; sourceTree = "<group>"; };
 		3E8AB09121A26D8000B29F61 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		3E8AB09321A27FD500B29F61 /* NN_ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_ActionSheet.swift; sourceTree = "<group>"; };
+		3E8AB09521A283F000B29F61 /* NN_Action_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Action_Button.swift; sourceTree = "<group>"; };
+		3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_ActionSheet_Core.swift; sourceTree = "<group>"; };
 		3E942B9B2182E8370058ED70 /* NN_Alert_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NN_Alert_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E942B9D2182E8370058ED70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E942B9F2182E8370058ED70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -153,15 +159,10 @@
 				3E44A7882182E7BD009DCED7 /* NN_Alert.h */,
 				3E44A7892182E7BD009DCED7 /* Info.plist */,
 				3E942BC92182E92C0058ED70 /* NN_Modal.swift */,
-				3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */,
-				A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */,
-				A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */,
-				3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */,
-				A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */,
-				A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */,
-				A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */,
+				3E8AB09721A28AD300B29F61 /* PopUps */,
 				3E942BD22182F6190058ED70 /* Tempura.swift */,
 				3E8AB09121A26D8000B29F61 /* Media.xcassets */,
+				3E8AB09821A28AE700B29F61 /* Actionsheet */,
 			);
 			path = NN_Alert;
 			sourceTree = "<group>";
@@ -174,6 +175,30 @@
 				3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		3E8AB09721A28AD300B29F61 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */,
+				A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */,
+				A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */,
+				3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */,
+				A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */,
+				A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */,
+				A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */,
+			);
+			path = PopUps;
+			sourceTree = "<group>";
+		};
+		3E8AB09821A28AE700B29F61 /* Actionsheet */ = {
+			isa = PBXGroup;
+			children = (
+				3E8AB09321A27FD500B29F61 /* NN_ActionSheet.swift */,
+				3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Core.swift */,
+				3E8AB09521A283F000B29F61 /* NN_Action_Button.swift */,
+			);
+			path = Actionsheet;
 			sourceTree = "<group>";
 		};
 		3E942B9C2182E8370058ED70 /* NN_Alert_Demo */ = {
@@ -380,11 +405,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8AB08B21A2447D00B29F61 /* NN_Alert_Steps.swift in Sources */,
+				3E8AB09421A27FD500B29F61 /* NN_ActionSheet.swift in Sources */,
 				A96A0F32218DA16D0097AAE8 /* NN_Progress_Steps.swift in Sources */,
 				3E8AB08921A2444D00B29F61 /* NN_Alert_Styles.swift in Sources */,
 				A9877E3A218E9D2100E797AE /* UIColor+Additions.swift in Sources */,
+				3E8AB09621A283F000B29F61 /* NN_Action_Button.swift in Sources */,
 				A9877E39218E9D2100E797AE /* UIFont+Additions.swift in Sources */,
 				3E942BCC2182E9930058ED70 /* NN_Pop_Up_Core.swift in Sources */,
+				3E8AB09A21A28D3B00B29F61 /* NN_ActionSheet_Core.swift in Sources */,
 				3E942BCA2182E92C0058ED70 /* NN_Modal.swift in Sources */,
 				3E8AB09021A26AFB00B29F61 /* NN_Pop_Up_Alert.swift in Sources */,
 				3E942BD32182F6190058ED70 /* Tempura.swift in Sources */,

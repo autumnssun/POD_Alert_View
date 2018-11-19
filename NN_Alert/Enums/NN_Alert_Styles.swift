@@ -46,27 +46,32 @@ public struct NN_Styles{
     public struct NN_Alerts_Sizes{
         var paddings:CGFloat
         var boxPadding:CGFloat
-        public init(padding:CGFloat? = 16, boxPadding:CGFloat? = 5){
+        var actionSheetHeight:CGFloat
+        public init(padding:CGFloat? = 16, boxPadding:CGFloat? = 5, actionSheetHeight:CGFloat? = 40){
             self.paddings = padding!
             self.boxPadding = boxPadding!
+            self.actionSheetHeight = actionSheetHeight!
         }
     }
     
     public struct NN_Alerts_Colors{
         var buttonTextColorLight:UIColor
         var buttonTextColorDark:UIColor
+        var buttonTextColorGray:UIColor
         var firstColor:UIColor
         var secondColor:UIColor
         var thirdColor:UIColor
         var fourColor:UIColor
         public init(textLight:UIColor? = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0),
                     textDark:UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                    textGrey:UIColor? = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0),
                     firstColor:UIColor? = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1),
                     secondColor:UIColor? = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1),
                     thirdColor:UIColor? = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
                     fourColor:UIColor? = #colorLiteral(red: 0.87843137254, green:0.02745098039, blue: 0.02745098039, alpha: 1)) {
             self.buttonTextColorLight = textLight!
             self.buttonTextColorDark = textDark!
+            self.buttonTextColorGray = textGrey!
             self.firstColor = firstColor!
             self.secondColor = secondColor!
             self.thirdColor = thirdColor!

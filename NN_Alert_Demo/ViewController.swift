@@ -52,5 +52,11 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func showActionSheet(_ sender: Any) {
+        let action_1 = NN_Action_Button(title: "Action_1", icon: #imageLiteral(resourceName: "empty"))
+        
+    }
+    
 }
  

@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A0Q-59-Jho">
-                                <rect key="frame" x="139" y="274.5" width="97" height="138"/>
+                                <rect key="frame" x="126" y="274.5" width="123" height="138"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-Xd-iHq">
-                                        <rect key="frame" x="0.0" y="0.0" width="97" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Binary alert"/>
                                         <connections>
@@ -29,7 +29,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-3N-6Uf">
-                                        <rect key="frame" x="0.0" y="36" width="97" height="36"/>
+                                        <rect key="frame" x="0.0" y="36" width="123" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Prompt Alert"/>
                                         <connections>
@@ -37,7 +37,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-oj-ihs">
-                                        <rect key="frame" x="0.0" y="72" width="97" height="36"/>
+                                        <rect key="frame" x="0.0" y="72" width="123" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="loading alert"/>
                                         <connections>
@@ -45,8 +45,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-9b-1pA">
-                                        <rect key="frame" x="0.0" y="108" width="97" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <rect key="frame" x="0.0" y="108" width="123" height="30"/>
+                                        <state key="normal" title="Show actionsheet"/>
+                                        <connections>
+                                            <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ot8-WW-pK3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
