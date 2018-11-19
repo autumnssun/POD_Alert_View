@@ -13,28 +13,12 @@ public class NN_Pop_Up_Icon:NN_Pop_Up_Basic{
     public convenience init(title:String,
                             detail:String? = nil,
                             image:UIImage? = nil,
-                            animate:Bool? = false,
-                            netralBtnText:String? = nil) {
+                            animate:Bool? = false) {
         self.init()
         self.setupIcon(image:image,animate:animate!)
         self.setupTitle(title:title,detail:detail)
-        self.setupBtn(netralBtnText: netralBtnText)
     }
     
-    func setupBtn(netralBtnText:String?){
-        if let btnLabel = netralBtnText {
-            let btn:UIButton = UIButton()
-            btnStacks.addArrangedSubview(btn)
-            btn.setTitle(btnLabel, for: .normal)
-            btn.setTitleColor(self.settings.colors.buttonTextColorLight, for: .normal)
-            btn.backgroundColor = self.settings.colors.secondColor
-            btn.contentEdgeInsets = UIEdgeInsets(top: 10,
-                                                 left: 10,
-                                                 bottom: 10,
-                                                 right: 10)
-            btn.addTarget(self, action: #selector(OKBtnDidTapped), for: .touchUpInside)
-        }
-    }
     
     func setupIcon(image:UIImage?, animate:Bool){
         if let img = image {
@@ -48,12 +32,6 @@ public class NN_Pop_Up_Icon:NN_Pop_Up_Basic{
             if animate{
                 self.rotateView(targetView:  imageView)
             }
-        }
-    }
-    
-    @objc func OKBtnDidTapped(){
-        DispatchQueue.main.async {
-            self.dismiss(animated: true)
         }
     }
 }

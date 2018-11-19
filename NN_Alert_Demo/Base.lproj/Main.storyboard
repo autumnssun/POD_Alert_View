@@ -18,38 +18,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A0Q-59-Jho">
-                                <rect key="frame" x="147.5" y="274.5" width="80" height="138"/>
+                                <rect key="frame" x="139" y="274.5" width="97" height="138"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-Xd-iHq">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Show alert"/>
+                                        <state key="normal" title="Binary alert"/>
                                         <connections>
-                                            <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="joY-Fo-lSa"/>
+                                            <action selector="hey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8e-Nf-F89"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-3N-6Uf">
-                                        <rect key="frame" x="0.0" y="36" width="80" height="36"/>
+                                        <rect key="frame" x="0.0" y="36" width="97" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Show alert"/>
+                                        <state key="normal" title="Prompt Alert"/>
                                         <connections>
-                                            <action selector="alert_1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwO-7N-Tqf"/>
+                                            <action selector="ho:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R35-ox-Qrg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-oj-ihs">
-                                        <rect key="frame" x="0.0" y="72" width="80" height="36"/>
+                                        <rect key="frame" x="0.0" y="72" width="97" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Show alert"/>
+                                        <state key="normal" title="loading alert"/>
                                         <connections>
-                                            <action selector="alert_2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F48-1c-X5p"/>
+                                            <action selector="loadAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lfa-4R-trA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-9b-1pA">
-                                        <rect key="frame" x="0.0" y="108" width="80" height="30"/>
+                                        <rect key="frame" x="0.0" y="108" width="97" height="30"/>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="showSteps:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klF-RC-RFb"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

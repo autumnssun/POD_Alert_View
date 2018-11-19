@@ -13,82 +13,44 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    @IBAction func showAlert(_ sender: Any) {
-        let alert = NN_Pop_Up_Icon(title: "Error",
-                                   detail: "hello",
-                                   image: #imageLiteral(resourceName: "loading"),
-                                   animate: true,
-                                   netralBtnText:"OK")
-        alert.show_animated_timeOut()
+    @IBAction func hey(_ sender: Any) {
+        let btn_1 = NN_Button(label: "dismiss", btnStyle: NN_Btn_Style.dismiss)
+        let btn_2 = NN_Button(label: "btn_2", btnStyle: NN_Btn_Style.destructive, action: nil, executioner: nil)
+        let alert = NN_Pop_Up_Alert(type:.successfull,
+                                    title: "Binary alert",
+                                    detail: "This is a binary alert",
+                                    btnOne:btn_1 ,
+                                    btnTwo:btn_2 )
+        alert.show(animated: true)
+    }
+    
+    
+    @IBAction func ho(_ sender: Any) {
+        let prompt = NN_Pop_Up_Prompt(title: "Send Email", detail: "Please input Email", promptPlaceHolder: "Email", promptPrefill: "prompt prefill", dismisBtnLabel: "dismiss", actionBtnLabel: "Action", actionSelector: #selector(promptCallback), actionExecutioner: self)
+        prompt.show(animated: true)
     }
 
-    @IBAction func alert_1(_ sender: Any) {
-        
-        
-        let alert = NN_Pop_Up_Prompt(title: "Prompt alert",
-                                    detail: "this is a prompt alert",
-                                    image: #imageLiteral(resourceName: "warning"),
-                                    netralBtnText: "Cancel",
-                                    executioner:self,
-                                    executeBtnText: "Confirm",
-                                    executeAction: #selector(runsomething),
-                                    promptPlaceHolder:"placeholder")
-        alert.show(animated: true)
+    
+    @IBAction func loadAlert(_ sender: Any) {
+        let alert = NN_Pop_Up_Alert(type: .working, title: "Loading")
+        alert.show(animated: true,timeOutDuration: 3)
     }
     
-    @IBAction func alert_2(_ sender: Any) {
-        let alert = NN_Pop_Up_Binary(title: "Binary alert",
-                                    detail: "this is a binary alert",
-                                    image: #imageLiteral(resourceName: "success"),
-                                    animate:true,
-                                    netralBtnText: "OK",
-                                    executioner:self,
-                                    executeBtnText: "Confirm",
-                                    executeAction: #selector(runsomethingelse))
-        alert.show(animated: true)
-    }
     
-    @objc func runsomething(text:Any){
-        if let str = text as? String{
-            print(str)
-        }
-        alert_2(self)
-    }
-    
-    @objc func runsomethingelse(){
-        print("i am runing this")
-        showSteps(self)
-    }
-    @IBAction func showSteps(_ sender: Any) {
-        
-        let step1 = Step(stepName:"Step1")
-        let step2 = Step(stepName:"Step2")
-        let steps = [step1,step2]
-        step1.changeStatus(status: .working, updatedLabel: "working on it")
-        let alert = NN_Progress_Steps(title: "steps",
-                                      steps:steps,
-                                     animate:false,
-                                     netralBtnText: "Cancel",executioner:self,
-                                     executeBtnText: "Confirm",
-                                     executeAction: #selector(runsomethingelse))
-        alert.btnStacks.isHidden = true
-        let timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(fireTimer), userInfo: (steps:steps,alert:alert), repeats: true)
-        
-        alert.show(animated: true)
-    }
-    @objc func fireTimer(timer:Timer) {
-        if let userInfo = timer.userInfo as? (steps:[Step],alert:NN_Progress_Steps){
-            let steps = userInfo.steps
-            if steps[1].status == .working{
-                steps[1].changeStatus(status: .success, updatedLabel: "done yay")
-                timer.invalidate()
-                userInfo.alert.btnStacks.isHidden = false
-            }
+    @objc func promptCallback(text:String?){
+        let alert = NN_Pop_Up_Alert(type: .working, title: "Loading")
+        alert.show(animated: false,timeOutDuration: 3)
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (timer) in
+            if Bool.random(){
+                let alert = NN_Pop_Up_Alert(type:.successfull, title: "Yay",detail:"Sent")
+                alert.show(animated: false,timeOutDuration: 5)
 
-            if steps[0].status == .working{
-                steps[0].changeStatus(status: .success, updatedLabel: "done")
-                steps[1].changeStatus(status: .working, updatedLabel: "working")
+            }else{
+                let alert = NN_Pop_Up_Alert(type: .fail, title: "OH no", detail:"something wrong")
+                alert.show(animated: false,timeOutDuration: 5)
+
             }
         }
     }
 }
+ 

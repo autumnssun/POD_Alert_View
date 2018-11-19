@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3E44A7962182E7BE009DCED7 /* NN_Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E44A7882182E7BD009DCED7 /* NN_Alert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3E8AB08921A2444D00B29F61 /* NN_Alert_Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08821A2444D00B29F61 /* NN_Alert_Styles.swift */; };
+		3E8AB08B21A2447D00B29F61 /* NN_Alert_Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08A21A2447D00B29F61 /* NN_Alert_Steps.swift */; };
+		3E8AB08E21A2495F00B29F61 /* NN_Alert_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */; };
+		3E8AB09021A26AFB00B29F61 /* NN_Pop_Up_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */; };
+		3E8AB09221A26D8000B29F61 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AB09121A26D8000B29F61 /* Media.xcassets */; };
 		3E942B9E2182E8370058ED70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942B9D2182E8370058ED70 /* AppDelegate.swift */; };
 		3E942BA02182E8370058ED70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942B9F2182E8370058ED70 /* ViewController.swift */; };
 		3E942BA32182E8370058ED70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E942BA12182E8370058ED70 /* Main.storyboard */; };
@@ -20,7 +25,6 @@
 		3E942BD32182F6190058ED70 /* Tempura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942BD22182F6190058ED70 /* Tempura.swift */; };
 		94A779BF730D123D8D01E9EA /* Pods_NN_Alert_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58AE43456BCF2B3CA8DF8E8 /* Pods_NN_Alert_Demo.framework */; };
 		A917C9592183E49C0092D5FE /* NN_Pop_Up_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */; };
-		A917C95B218422250092D5FE /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A917C95A218422250092D5FE /* Media.xcassets */; };
 		A96A0F32218DA16D0097AAE8 /* NN_Progress_Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */; };
 		A9877E39218E9D2100E797AE /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9877E37218E9D2100E797AE /* UIFont+Additions.swift */; };
 		A9877E3A218E9D2100E797AE /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9877E38218E9D2100E797AE /* UIColor+Additions.swift */; };
@@ -59,6 +63,11 @@
 		3E44A7852182E7BD009DCED7 /* NN_Alert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NN_Alert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E44A7882182E7BD009DCED7 /* NN_Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NN_Alert.h; sourceTree = "<group>"; };
 		3E44A7892182E7BD009DCED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E8AB08821A2444D00B29F61 /* NN_Alert_Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Alert_Styles.swift; sourceTree = "<group>"; };
+		3E8AB08A21A2447D00B29F61 /* NN_Alert_Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Alert_Steps.swift; sourceTree = "<group>"; };
+		3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Alert_Button.swift; sourceTree = "<group>"; };
+		3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Alert.swift; sourceTree = "<group>"; };
+		3E8AB09121A26D8000B29F61 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		3E942B9B2182E8370058ED70 /* NN_Alert_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NN_Alert_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E942B9D2182E8370058ED70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E942B9F2182E8370058ED70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +82,6 @@
 		792F19B8781E4832BA3824B6 /* Pods-NN_Alert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert/Pods-NN_Alert.debug.xcconfig"; sourceTree = "<group>"; };
 		9A8E5488DB14FDFE09281345 /* Pods_NN_Alert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NN_Alert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Basic.swift; sourceTree = "<group>"; };
-		A917C95A218422250092D5FE /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Progress_Steps.swift; sourceTree = "<group>"; };
 		A9877E37218E9D2100E797AE /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
 		A9877E38218E9D2100E797AE /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
@@ -139,6 +147,7 @@
 		3E44A7872182E7BD009DCED7 /* NN_Alert */ = {
 			isa = PBXGroup;
 			children = (
+				3E8AB08C21A2449700B29F61 /* Enums */,
 				A9877E38218E9D2100E797AE /* UIColor+Additions.swift */,
 				A9877E37218E9D2100E797AE /* UIFont+Additions.swift */,
 				3E44A7882182E7BD009DCED7 /* NN_Alert.h */,
@@ -147,13 +156,24 @@
 				3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */,
 				A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */,
 				A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */,
+				3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */,
 				A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */,
 				A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */,
 				A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */,
 				3E942BD22182F6190058ED70 /* Tempura.swift */,
-				A917C95A218422250092D5FE /* Media.xcassets */,
+				3E8AB09121A26D8000B29F61 /* Media.xcassets */,
 			);
 			path = NN_Alert;
+			sourceTree = "<group>";
+		};
+		3E8AB08C21A2449700B29F61 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				3E8AB08A21A2447D00B29F61 /* NN_Alert_Steps.swift */,
+				3E8AB08821A2444D00B29F61 /* NN_Alert_Styles.swift */,
+				3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		3E942B9C2182E8370058ED70 /* NN_Alert_Demo */ = {
@@ -275,7 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A917C95B218422250092D5FE /* Media.xcassets in Resources */,
+				3E8AB09221A26D8000B29F61 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,13 +379,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E8AB08B21A2447D00B29F61 /* NN_Alert_Steps.swift in Sources */,
 				A96A0F32218DA16D0097AAE8 /* NN_Progress_Steps.swift in Sources */,
+				3E8AB08921A2444D00B29F61 /* NN_Alert_Styles.swift in Sources */,
 				A9877E3A218E9D2100E797AE /* UIColor+Additions.swift in Sources */,
 				A9877E39218E9D2100E797AE /* UIFont+Additions.swift in Sources */,
 				3E942BCC2182E9930058ED70 /* NN_Pop_Up_Core.swift in Sources */,
 				3E942BCA2182E92C0058ED70 /* NN_Modal.swift in Sources */,
+				3E8AB09021A26AFB00B29F61 /* NN_Pop_Up_Alert.swift in Sources */,
 				3E942BD32182F6190058ED70 /* Tempura.swift in Sources */,
 				A9D0BD7121856D2D00C2E2DE /* NN_Pop_Up_Icon.swift in Sources */,
+				3E8AB08E21A2495F00B29F61 /* NN_Alert_Button.swift in Sources */,
 				A9FED21E2187270A000D2D08 /* NN_Pop_Up_Prompt.swift in Sources */,
 				A917C9592183E49C0092D5FE /* NN_Pop_Up_Basic.swift in Sources */,
 				A9D0BD732185D08C00C2E2DE /* NN_Pop_Up_Binary.swift in Sources */,
@@ -548,7 +572,11 @@
 				INFOPLIST_FILE = NN_Alert/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -573,7 +601,11 @@
 				INFOPLIST_FILE = NN_Alert/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -591,7 +623,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J5NKKT78R;
 				INFOPLIST_FILE = NN_Alert_Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -608,7 +643,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J5NKKT78R;
 				INFOPLIST_FILE = NN_Alert_Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

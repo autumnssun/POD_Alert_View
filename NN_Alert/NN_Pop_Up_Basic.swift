@@ -29,4 +29,5 @@ public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
             self.textStacks.addArrangedSubview(detailLabel)
         }
     }
+
 }

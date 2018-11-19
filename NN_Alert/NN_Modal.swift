@@ -8,15 +8,7 @@
 
 import Foundation
 import UIKit
-import Material
-
-
-public enum BtnStyle{
-    case destructive
-    case emphasize
-    case attention
-    case normal
-}
+//import Material
 
 public class NN_Alert_Manager{
     public static let shared = NN_Alert_Manager()
@@ -26,63 +18,6 @@ public class NN_Alert_Manager{
     }
 }
 
-
-public struct NN_Styles{
-    public var fonts: NN_Alerts_Fonts
-    public var sizes: NN_Alerts_Sizes
-    public var colors: NN_Alerts_Colors
-    
-    public init(colorSets:NN_Alerts_Colors? = NN_Alerts_Colors(),
-         fontSets:NN_Alerts_Fonts? = NN_Alerts_Fonts(),
-         sizeSets:NN_Alerts_Sizes? = NN_Alerts_Sizes()) {
-        self.fonts = fontSets!
-        self.colors = colorSets!
-        self.sizes = sizeSets!
-    }
-    
-    public struct NN_Alerts_Fonts{
-        var titleFont:UIFont
-        var detailFont:UIFont
-        var buttonFont:UIFont
-        public init(titleFont:UIFont? = UIFont(name: "Avenir-Heavy", size: UIFont.labelFontSize)!,
-            detailFont:UIFont? = UIFont(name: "Avenir-Light", size: UIFont.systemFontSize)!){
-            self.titleFont = titleFont!
-            self.detailFont = detailFont!
-            self.buttonFont = titleFont!
-        }
-    }
-    
-    public struct NN_Alerts_Sizes{
-        var paddings:CGFloat
-        var boxPadding:CGFloat
-        public init(padding:CGFloat? = 16, boxPadding:CGFloat? = 5){
-            self.paddings = padding!
-            self.boxPadding = boxPadding!
-        }
-    }
-    
-    public struct NN_Alerts_Colors{
-        var buttonTextColorLight:UIColor
-        var buttonTextColorDark:UIColor
-        var firstColor:UIColor
-        var secondColor:UIColor
-        var thirdColor:UIColor
-        var fourColor:UIColor
-        public init(textLight:UIColor? = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0),
-                    textDark:UIColor? = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
-                    firstColor:UIColor? = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1),
-                    secondColor:UIColor? = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1),
-                    thirdColor:UIColor? = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
-                    fourColor:UIColor? = #colorLiteral(red: 0.87843137254, green:0.02745098039, blue: 0.02745098039, alpha: 1)) {
-            self.buttonTextColorLight = textLight!
-            self.buttonTextColorDark = textDark!
-            self.firstColor = firstColor!
-            self.secondColor = secondColor!
-            self.thirdColor = thirdColor!
-            self.fourColor = thirdColor!
-        }
-    }
-}
 
 public protocol NN_Modal {
     func show(animated:Bool,timeOutDuration:TimeInterval?)
@@ -136,8 +71,9 @@ public extension NN_Modal where Self:UIView{
         }
         
         if let waitDuration = timeOutDuration{
+            self.backgroundView.isUserInteractionEnabled = false
             Timer.scheduledTimer(withTimeInterval: waitDuration, repeats: false) { (timer) in
-                self.dismiss(animated: true)
+                self.dismiss(animated: false)
             }
         }
     }
@@ -227,106 +163,4 @@ public extension NN_Modal where Self:UIView{
     func adjustViewWithKeyboard(_ notification:Notification){
         print(notification)
     }
-}
-
-public class Step:UIStackView{
-    public var status:StepStatus = .queing
-    public var label:UILabel?
-    public var image:UIImageView?
-    
-    public init(stepName:String) {
-        super.init(frame: CGRect.zero)
-        setUpVisual(stepName:stepName)
-    }
-    
-    func setUpVisual(stepName:String){
-        self.label = UILabel.init()
-        self.image = UIImageView()
-        
-        self.addArrangedSubview(self.image!)
-        self.addArrangedSubview(self.label!)
-
-        self.label?.text = stepName
-        
-        let targetImage = #imageLiteral(resourceName: "loading")
-        self.image?.image = targetImage
-        self.image?.snp.makeConstraints({ (make) in
-            make.width.equalTo(30)
-            make.height.equalTo(30)
-        })
-        self.image?.setContentHuggingPriority(UILayoutPriority.init(2000), for: NSLayoutConstraint.Axis.horizontal)
-        self.changeStatus(status: .queing)
-    }
-    
-    required init(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    var pulseAnimation:CABasicAnimation{
-        let pulseAnimation = CABasicAnimation(keyPath: #keyPath(CALayer.opacity))
-        pulseAnimation.duration = 1
-        pulseAnimation.fromValue = 0
-        pulseAnimation.toValue = 1
-        pulseAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        pulseAnimation.autoreverses = true
-        pulseAnimation.repeatCount = .greatestFiniteMagnitude
-        return pulseAnimation
-    }
-    
-    
-    var rotate360Animation:CABasicAnimation{
-        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
-        rotateAnimation.fromValue = 0.0
-        rotateAnimation.toValue = CGFloat(.pi * 2.0)
-        rotateAnimation.duration = 1
-        rotateAnimation.autoreverses = false
-        rotateAnimation.repeatCount = .greatestFiniteMagnitude
-        return rotateAnimation
-    }
-
-    
-    
-    public func changeStatus(status:StepStatus,updatedLabel:String? = nil){
-        self.status = status
-        switch status {
-        case .queing:
-            self.image?.image = #imageLiteral(resourceName: "loading")
-            self.label?.textColor = UIColor.colbb
-            break
-        case .working:
-            self.image?.image = #imageLiteral(resourceName: "loading")
-            self.label?.textColor = UIColor.col33
-            if let newText = updatedLabel{
-                label?.text = newText
-            }
-            self.image?.layer.add(rotate360Animation, forKey: "fullRevolution")
-            self.label?.layer.add(pulseAnimation, forKey: "animateOpacity")
-            break
-        case .success:
-            self.image?.image = #imageLiteral(resourceName: "success")
-            self.label?.textColor = UIColor.col33
-            if let newText = updatedLabel{
-                label?.text = newText
-            }
-            self.label?.layer.removeAnimation(forKey: "animateOpacity")
-            self.image?.layer.removeAnimation(forKey: "fullRevolution")
-            break
-        case .fail:
-            self.image?.image = #imageLiteral(resourceName: "error")
-            self.label?.textColor = UIColor.col33
-            if let newText = updatedLabel{
-                label?.text = newText
-            }
-            self.label?.layer.removeAnimation(forKey: "animateOpacity")
-            self.image?.layer.removeAnimation(forKey: "fullRevolution")
-            break
-        }
-    }
-}
-
-public enum StepStatus{
-    case queing
-    case working
-    case success
-    case fail
 }

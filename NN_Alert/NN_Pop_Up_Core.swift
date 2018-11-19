@@ -37,6 +37,10 @@ public class NN_Pop_Up_Core: UIView, NN_Modal {
         dismiss(animated: true)
     }
     
+    @objc func dismissBtnDidTapped(){
+        self.dismiss(animated: true)
+    }
+    
     @objc func keyboardWillDisappearSelector(notification:Notification){
         self.adjustViewWithKeyboard(notification)
     }

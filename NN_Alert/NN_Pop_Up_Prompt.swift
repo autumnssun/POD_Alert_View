@@ -8,23 +8,30 @@
 
 import Foundation
 import Material
-public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary{
+public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary_Options{
     let promptTextField:ErrorTextField = ErrorTextField()
-
+    var actionExecutioner:UIResponder?
+    var actionSelector:Selector?
     public convenience init(title:String,
                             detail:String? = nil,
                             image:UIImage? = nil,
                             animate:Bool? = false,
-                            netralBtnText:String? = nil,
-                            executioner:UIResponder? = nil,
-                            executeBtnText:String? = nil,
-                            executeAction:Selector? = nil,
-                            executeBtnStyle:BtnStyle? = .normal,
                             promptPlaceHolder:String? = nil,
-                            promptPrefill:String? = nil) {
-        self.init(title: title, detail: detail, image: image, animate: animate, netralBtnText: netralBtnText)
+                            promptPrefill:String? = nil,
+                            dismisBtnLabel:String,
+                            actionBtnLabel:String,
+                            actionSelector:Selector? = nil,
+                            actionExecutioner:UIResponder? = nil) {
+        
+        self.init(title: title, detail: detail, image: image, animate: animate)
+        
+        let btnOne:NN_Button? = NN_Button(label: dismisBtnLabel, btnStyle: NN_Btn_Style.normal, action: #selector(dismissBtnDidTapped), executioner: self)
+        let btnTwo:NN_Button? = NN_Button(label: actionBtnLabel, btnStyle: NN_Btn_Style.emphasize, action: #selector(executePromptAction), executioner: self)
+        self.buttonTwo = btnTwo
+        self.buttonOne = btnOne
+        self.actionExecutioner = actionExecutioner
+        self.actionSelector = actionSelector
         self.setupPrompt(promptPlaceHolder: promptPlaceHolder, promptPrefill: promptPrefill)
-        self.setupExecutionBtn(executioner: executioner, executeBtnText: executeBtnText, executeAction: executeAction, executeBtnStyle: executeBtnStyle)
     }
     
     func setupPrompt(promptPlaceHolder:String?, promptPrefill:String?){
@@ -35,34 +42,8 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary{
         self.textStacks.addArrangedSubview(promptTextField)
     }
     
-    func setupExecutionBtn(executioner:UIResponder? = nil,
-                           executeBtnText:String? = nil,
-                           executeAction:Selector? = nil,
-                           executeBtnStyle:BtnStyle? = .normal){
-        self.actionBtnAction = executeAction
-        self.executioner = executioner
-        self.setupPromptExecuteBtn(executeBtnText:executeBtnText)
-    }
-    
-    
-    func setupPromptExecuteBtn(executeBtnText:String?){
-        if let text = executeBtnText{
-            let btn:UIButton = UIButton()
-            btnStacks.addArrangedSubview(btn)
-            btn.setTitle(text, for: .normal)
-            btn.contentEdgeInsets = UIEdgeInsets(top: 10,
-                                                 left: 10,
-                                                 bottom: 10,
-                                                 right: 10)
-            btn.addTarget(self, action: #selector(executePromptAction), for: .touchUpInside)
-            btn.backgroundColor = self.settings.colors.firstColor
-        }
-    }
-
-    
     @objc func executePromptAction(){
         self.dismiss(animated: true)
-        self.executioner?.perform(actionBtnAction, with: self.promptTextField.text)
+        self.actionExecutioner?.perform(actionSelector, with: self.promptTextField.text)
     }
-
 }

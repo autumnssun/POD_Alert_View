@@ -7,44 +7,39 @@
 //
 
 import Foundation
-public class NN_Pop_Up_Binary:NN_Pop_Up_Icon{
-    
-    var actionBtnAction:Selector?
-    var executioner:UIResponder?
-    public convenience init(title:String,
-                            detail:String? = nil,
-                            image:UIImage? = nil,
-                            animate:Bool? = false,
-                            netralBtnText:String? = nil,
-                            executioner:UIResponder? = nil,
-                            executeBtnText:String? = nil,
-                            executeAction:Selector? = nil,
-                            executeBtnStyle:BtnStyle? = .normal) {
-        self.init()
-        self.setupIcon(image:image,animate:animate!)
-        self.setupTitle(title:title,detail:detail)
-        self.setupBtn(netralBtnText: netralBtnText)
-        self.actionBtnAction = executeAction
-        self.executioner = executioner
-        self.setupActionbtn(executeBtnText:executeBtnText)
+public class NN_Pop_Up_Binary_Options:NN_Pop_Up_Icon{
+    public var buttonOne: NN_Button?{
+        didSet{
+            self.btnStacks.insertArrangedSubview(buttonOne!, at: 1)
+        }
     }
-    
-    func setupActionbtn(executeBtnText:String?){
-        if let text = executeBtnText{
-            let btn:UIButton = UIButton()
-            btnStacks.addArrangedSubview(btn)
-            btn.setTitle(text, for: .normal)
-            btn.contentEdgeInsets = UIEdgeInsets(top: 10,
-                                                 left: 10,
-                                                 bottom: 10,
-                                                 right: 10)
-            btn.addTarget(self, action: #selector(executeAction), for: .touchUpInside)
-            btn.backgroundColor = self.settings.colors.firstColor
+    public var buttonTwo: NN_Button?{
+        didSet{
+            self.btnStacks.insertArrangedSubview(buttonTwo!,at: 1)
         }
     }
     
-    @objc func executeAction(){
-        self.dismiss(animated: true)
-        self.executioner?.perform(actionBtnAction)
+    convenience init(title:String,
+                            detail:String? = nil,
+                            image:UIImage? = nil,
+                            animate:Bool? = false,
+                            btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil) {
+        self.init()
+        self.setupIcon(image:image,animate:animate!)
+        self.setupTitle(title:title,detail:detail)
+        self.buttonOne = btnOne
+        self.buttonTwo = btnTwo
+        self.setupBtns(btns:[btnOne,btnTwo])
+    }
+    
+    func setupBtns(btns:[NN_Button?]){
+        for btn in btns {
+            if let bt = btn {
+                self.btnStacks.addArrangedSubview(bt)
+                if bt.button_style == .dismiss{
+                    bt.addTarget(self, action: #selector(dismissBtnDidTapped), for: .touchUpInside)
+                }
+            }
+        }
     }
 }
