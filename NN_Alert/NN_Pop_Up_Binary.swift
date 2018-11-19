@@ -36,7 +36,7 @@ public class NN_Pop_Up_Binary_Options:NN_Pop_Up_Icon{
         for btn in btns {
             if let bt = btn {
                 self.btnStacks.addArrangedSubview(bt)
-                if bt.button_style == .dismiss{
+                if bt.button_style == .dismiss_normal || bt.button_style == .dismiss_highlight{
                     bt.addTarget(self, action: #selector(dismissBtnDidTapped), for: .touchUpInside)
                 }
             }

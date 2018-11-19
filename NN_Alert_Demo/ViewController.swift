@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func hey(_ sender: Any) {
-        let btn_1 = NN_Button(label: "dismiss", btnStyle: NN_Btn_Style.dismiss)
+        let btn_1 = NN_Button(label: "dismiss", btnStyle: NN_Btn_Style.dismiss_highlight)
         let btn_2 = NN_Button(label: "btn_2", btnStyle: NN_Btn_Style.destructive, action: nil, executioner: nil)
         let alert = NN_Pop_Up_Alert(type:.successfull,
                                     title: "Binary alert",

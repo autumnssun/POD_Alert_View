@@ -13,7 +13,8 @@ public enum NN_Btn_Style{
     case emphasize
     case attention
     case normal
-    case dismiss
+    case dismiss_normal
+    case dismiss_highlight
 }
 
 public class NN_Button:RaisedButton{
@@ -41,7 +42,7 @@ public class NN_Button:RaisedButton{
     }
     
     
-    func applyStyle(btnStyle:NN_Btn_Style?  = .dismiss){
+    func applyStyle(btnStyle:NN_Btn_Style?  = .dismiss_normal){
         self.button_style = btnStyle
         switch btnStyle! {
         case .normal :
@@ -60,9 +61,14 @@ public class NN_Button:RaisedButton{
             self.backgroundColor = NN_Alert_Manager.shared.style.colors.firstColor
             self.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
             break
-        case .dismiss:
+        case .dismiss_normal:
             self.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             self.setTitleColor(NN_Alert_Manager.shared.style.colors.firstColor, for: .normal)
+            break
+        case .dismiss_highlight:
+            self.backgroundColor = NN_Alert_Manager.shared.style.colors.firstColor
+            self.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+
             break;
         }
     }
