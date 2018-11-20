@@ -3,17 +3,17 @@
     {
       "scale" : "1x",
       "idiom" : "universal",
-      "filename" : "empty.png"
+      "filename" : "22X22CheckBoxUnchecked.png"
     },
     {
       "scale" : "2x",
       "idiom" : "universal",
-      "filename" : "empty@2x.png"
+      "filename" : "22X22CheckBoxUnchecked@2x.png"
     },
     {
       "scale" : "3x",
       "idiom" : "universal",
-      "filename" : "empty@3x.png"
+      "filename" : "22X22CheckBoxUnchecked@3x.png"
     }
   ],
   "info" : {

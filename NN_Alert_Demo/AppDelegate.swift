@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        NN_Alert_Manager.shared.style = NN_Styles()
+        NN_Pop_Up_Manager.shared.style = NN_Styles()
         return true
     }
 

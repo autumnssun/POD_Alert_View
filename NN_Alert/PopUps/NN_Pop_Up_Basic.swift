@@ -9,6 +9,8 @@
 import Foundation
 import Material
 public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
+    
+
     public convenience init(title:String,detail:String? = nil) {
         self.init()
         self.setupTitle(title:title,detail:detail)
@@ -17,15 +19,15 @@ public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
         let titleLabel = UILabel()
         titleLabel.text = title
         titleLabel.numberOfLines = 0
-        titleLabel.font = self.settings.fonts.titleFont
-        titleLabel.textColor = self.settings.colors.buttonTextColorDark
+        titleLabel.font = NN_Pop_Up_Manager.shared.style.fonts.titleFont
+        titleLabel.textColor = NN_Pop_Up_Manager.shared.style.colors.buttonTextColorDark
         self.textStacks.addArrangedSubview(titleLabel)
         if let d = detail {
             let detailLabel = UILabel()
             detailLabel.text = d
             detailLabel.numberOfLines = 0
-            detailLabel.font = self.settings.fonts.detailFont
-            detailLabel.textColor = self.settings.colors.buttonTextColorDark
+            detailLabel.font = NN_Pop_Up_Manager.shared.style.fonts.detailFont
+            detailLabel.textColor = NN_Pop_Up_Manager.shared.style.colors.buttonTextColorDark
             self.textStacks.addArrangedSubview(detailLabel)
         }
     }

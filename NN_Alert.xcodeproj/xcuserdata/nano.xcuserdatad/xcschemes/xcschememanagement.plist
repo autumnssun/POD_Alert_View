@@ -12,7 +12,7 @@
 		<key>NN_Alert.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>11</integer>
 		</dict>
 		<key>NN_Alert_Demo.xcscheme</key>
 		<dict>
@@ -22,7 +22,25 @@
 		<key>NN_Alert_Demo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>13</integer>
+		</dict>
+		<key>NN_Alert_Unit_Tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3E44A7842182E7BD009DCED7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3EABF73621A3D39C001B626F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

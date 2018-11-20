@@ -1,25 +1,33 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
-
+def testPod
+    pod 'Quick'
+    pod 'Nimble'
+end
 def shared
-  pod 'SnapKit'
-  pod 'Material'
+    pod 'SnapKit'
+    pod 'Material'
 end
 
 target 'NN_Alert' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  shared
-  # Pods for NN_Alert
-
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    shared
+    # Pods for NN_Alert
+    
 end
 
 target 'NN_Alert_Demo' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  shared
-  pod 'IQKeyboardManager'
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    shared
+    pod 'IQKeyboardManager'
+    
+    # Pods for NN_Alert_Demo
+    
+end
 
-  # Pods for NN_Alert_Demo
-
+target 'NN_Alert_Unit_Tests' do
+    use_frameworks!
+    testPod
 end

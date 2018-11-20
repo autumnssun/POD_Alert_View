@@ -48,7 +48,7 @@
                                         <rect key="frame" x="0.0" y="108" width="123" height="30"/>
                                         <state key="normal" title="Show actionsheet"/>
                                         <connections>
-                                            <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ot8-WW-pK3"/>
+                                            <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IDQ-RY-NKi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -61,6 +61,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mainStack" destination="A0Q-59-Jho" id="a2e-RO-F9i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

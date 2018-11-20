@@ -7,38 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E40A6B421A37C5300307E9A /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E40A6B221A37C5200307E9A /* UIFont+Additions.swift */; };
+		3E40A6B521A37C5300307E9A /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E40A6B321A37C5300307E9A /* UIColor+Additions.swift */; };
+		3E40A6B721A37C7900307E9A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E40A6B621A37C7900307E9A /* Extension.swift */; };
 		3E44A7962182E7BE009DCED7 /* NN_Alert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E44A7882182E7BD009DCED7 /* NN_Alert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3E8AB08921A2444D00B29F61 /* NN_Alert_Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08821A2444D00B29F61 /* NN_Alert_Styles.swift */; };
 		3E8AB08B21A2447D00B29F61 /* NN_Alert_Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08A21A2447D00B29F61 /* NN_Alert_Steps.swift */; };
 		3E8AB08E21A2495F00B29F61 /* NN_Alert_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */; };
 		3E8AB09021A26AFB00B29F61 /* NN_Pop_Up_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */; };
-		3E8AB09221A26D8000B29F61 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AB09121A26D8000B29F61 /* Media.xcassets */; };
-		3E8AB09421A27FD500B29F61 /* NN_ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09321A27FD500B29F61 /* NN_ActionSheet.swift */; };
+		3E8AB09421A27FD500B29F61 /* NN_ActionSheet_Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09321A27FD500B29F61 /* NN_ActionSheet_Core.swift */; };
 		3E8AB09621A283F000B29F61 /* NN_Action_Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09521A283F000B29F61 /* NN_Action_Button.swift */; };
-		3E8AB09A21A28D3B00B29F61 /* NN_ActionSheet_Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Core.swift */; };
+		3E8AB09A21A28D3B00B29F61 /* NN_ActionSheet_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Model.swift */; };
 		3E942B9E2182E8370058ED70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942B9D2182E8370058ED70 /* AppDelegate.swift */; };
 		3E942BA02182E8370058ED70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942B9F2182E8370058ED70 /* ViewController.swift */; };
 		3E942BA32182E8370058ED70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E942BA12182E8370058ED70 /* Main.storyboard */; };
 		3E942BA52182E8380058ED70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E942BA42182E8380058ED70 /* Assets.xcassets */; };
 		3E942BA82182E8380058ED70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E942BA62182E8380058ED70 /* LaunchScreen.storyboard */; };
-		3E942BCA2182E92C0058ED70 /* NN_Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942BC92182E92C0058ED70 /* NN_Modal.swift */; };
+		3E942BCA2182E92C0058ED70 /* NN_Pop_Up_Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942BC92182E92C0058ED70 /* NN_Pop_Up_Modal.swift */; };
 		3E942BCC2182E9930058ED70 /* NN_Pop_Up_Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */; };
 		3E942BCD2182F0C90058ED70 /* NN_Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; };
 		3E942BCE2182F0C90058ED70 /* NN_Alert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3E942BD32182F6190058ED70 /* Tempura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942BD22182F6190058ED70 /* Tempura.swift */; };
+		3EABF73121A39142001B626F /* NN_Alert.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; };
+		3EABF73221A39220001B626F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AB09121A26D8000B29F61 /* Media.xcassets */; };
+		3EABF73A21A3D39C001B626F /* NN_Alert_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABF73921A3D39C001B626F /* NN_Alert_Unit_Tests.swift */; };
+		3EABF73C21A3D39C001B626F /* NN_Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; };
+		3EABF74321A3E36D001B626F /* NN_ActionSheet_Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABF74221A3E36D001B626F /* NN_ActionSheet_Trigger.swift */; };
 		94A779BF730D123D8D01E9EA /* Pods_NN_Alert_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F58AE43456BCF2B3CA8DF8E8 /* Pods_NN_Alert_Demo.framework */; };
 		A917C9592183E49C0092D5FE /* NN_Pop_Up_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */; };
-		A96A0F32218DA16D0097AAE8 /* NN_Progress_Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */; };
-		A9877E39218E9D2100E797AE /* UIFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9877E37218E9D2100E797AE /* UIFont+Additions.swift */; };
-		A9877E3A218E9D2100E797AE /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9877E38218E9D2100E797AE /* UIColor+Additions.swift */; };
+		A96A0F32218DA16D0097AAE8 /* NN_Pop_Up_Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A0F31218DA16D0097AAE8 /* NN_Pop_Up_Steps.swift */; };
 		A9D0BD7121856D2D00C2E2DE /* NN_Pop_Up_Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */; };
 		A9D0BD732185D08C00C2E2DE /* NN_Pop_Up_Binary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */; };
 		A9FED21E2187270A000D2D08 /* NN_Pop_Up_Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */; };
+		AA07734E590B1B195D76D8AB /* Pods_NN_Alert_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1CFFF18C7525AC2FB48EE9 /* Pods_NN_Alert_Unit_Tests.framework */; };
 		AA12CA1A71E3B42FADB724EC /* Pods_NN_Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E5488DB14FDFE09281345 /* Pods_NN_Alert.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3E942BCF2182F0C90058ED70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E44A77C2182E7BD009DCED7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E44A7842182E7BD009DCED7;
+			remoteInfo = NN_Alert;
+		};
+		3EABF73D21A3D39C001B626F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3E44A77C2182E7BD009DCED7 /* Project object */;
 			proxyType = 1;
@@ -62,7 +74,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B227946EA4AE75DF2F48203 /* Pods-NN_Alert_Unit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert_Unit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert_Unit_Tests/Pods-NN_Alert_Unit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3915679CC36EA3A6DDDB9F98 /* Pods-NN_Alert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert.release.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert/Pods-NN_Alert.release.xcconfig"; sourceTree = "<group>"; };
+		3E40A6B221A37C5200307E9A /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
+		3E40A6B321A37C5300307E9A /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		3E40A6B621A37C7900307E9A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3E44A7852182E7BD009DCED7 /* NN_Alert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NN_Alert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E44A7882182E7BD009DCED7 /* NN_Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NN_Alert.h; sourceTree = "<group>"; };
 		3E44A7892182E7BD009DCED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,9 +87,9 @@
 		3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Alert_Button.swift; sourceTree = "<group>"; };
 		3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Alert.swift; sourceTree = "<group>"; };
 		3E8AB09121A26D8000B29F61 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		3E8AB09321A27FD500B29F61 /* NN_ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_ActionSheet.swift; sourceTree = "<group>"; };
+		3E8AB09321A27FD500B29F61 /* NN_ActionSheet_Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_ActionSheet_Core.swift; sourceTree = "<group>"; };
 		3E8AB09521A283F000B29F61 /* NN_Action_Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Action_Button.swift; sourceTree = "<group>"; };
-		3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_ActionSheet_Core.swift; sourceTree = "<group>"; };
+		3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_ActionSheet_Model.swift; sourceTree = "<group>"; };
 		3E942B9B2182E8370058ED70 /* NN_Alert_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NN_Alert_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E942B9D2182E8370058ED70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E942B9F2182E8370058ED70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,21 +97,24 @@
 		3E942BA42182E8380058ED70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E942BA72182E8380058ED70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E942BA92182E8380058ED70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E942BC92182E92C0058ED70 /* NN_Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Modal.swift; sourceTree = "<group>"; };
+		3E942BC92182E92C0058ED70 /* NN_Pop_Up_Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Modal.swift; sourceTree = "<group>"; };
 		3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Core.swift; sourceTree = "<group>"; };
-		3E942BD22182F6190058ED70 /* Tempura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempura.swift; sourceTree = "<group>"; };
+		3EABF73721A3D39C001B626F /* NN_Alert_Unit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NN_Alert_Unit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EABF73921A3D39C001B626F /* NN_Alert_Unit_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Alert_Unit_Tests.swift; sourceTree = "<group>"; };
+		3EABF73B21A3D39C001B626F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EABF74221A3E36D001B626F /* NN_ActionSheet_Trigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_ActionSheet_Trigger.swift; sourceTree = "<group>"; };
 		682A399E025E4C500D1A10E1 /* Pods-NN_Alert_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert_Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert_Demo/Pods-NN_Alert_Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		71069A1BA08EA75CC28BF21F /* Pods-NN_Alert_Unit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert_Unit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert_Unit_Tests/Pods-NN_Alert_Unit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		792F19B8781E4832BA3824B6 /* Pods-NN_Alert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert/Pods-NN_Alert.debug.xcconfig"; sourceTree = "<group>"; };
 		9A8E5488DB14FDFE09281345 /* Pods_NN_Alert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NN_Alert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Basic.swift; sourceTree = "<group>"; };
-		A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Progress_Steps.swift; sourceTree = "<group>"; };
-		A9877E37218E9D2100E797AE /* UIFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Additions.swift"; sourceTree = "<group>"; };
-		A9877E38218E9D2100E797AE /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		A96A0F31218DA16D0097AAE8 /* NN_Pop_Up_Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Steps.swift; sourceTree = "<group>"; };
 		A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Icon.swift; sourceTree = "<group>"; };
 		A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Binary.swift; sourceTree = "<group>"; };
 		A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN_Pop_Up_Prompt.swift; sourceTree = "<group>"; };
 		EB3BD66DEC7EADE75C3B074E /* Pods-NN_Alert_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert_Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert_Demo/Pods-NN_Alert_Demo.release.xcconfig"; sourceTree = "<group>"; };
 		F58AE43456BCF2B3CA8DF8E8 /* Pods_NN_Alert_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NN_Alert_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1CFFF18C7525AC2FB48EE9 /* Pods_NN_Alert_Unit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NN_Alert_Unit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +135,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EABF73421A3D39C001B626F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EABF73C21A3D39C001B626F /* NN_Alert.framework in Frameworks */,
+				AA07734E590B1B195D76D8AB /* Pods_NN_Alert_Unit_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -126,6 +154,8 @@
 				3915679CC36EA3A6DDDB9F98 /* Pods-NN_Alert.release.xcconfig */,
 				682A399E025E4C500D1A10E1 /* Pods-NN_Alert_Demo.debug.xcconfig */,
 				EB3BD66DEC7EADE75C3B074E /* Pods-NN_Alert_Demo.release.xcconfig */,
+				0B227946EA4AE75DF2F48203 /* Pods-NN_Alert_Unit_Tests.debug.xcconfig */,
+				71069A1BA08EA75CC28BF21F /* Pods-NN_Alert_Unit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -135,6 +165,7 @@
 			children = (
 				3E44A7872182E7BD009DCED7 /* NN_Alert */,
 				3E942B9C2182E8370058ED70 /* NN_Alert_Demo */,
+				3EABF73821A3D39C001B626F /* NN_Alert_Unit_Tests */,
 				3E44A7862182E7BD009DCED7 /* Products */,
 				1C67A925DD7500AA4DB3568C /* Pods */,
 				7FEB86E5B76975541D5454E3 /* Frameworks */,
@@ -146,6 +177,7 @@
 			children = (
 				3E44A7852182E7BD009DCED7 /* NN_Alert.framework */,
 				3E942B9B2182E8370058ED70 /* NN_Alert_Demo.app */,
+				3EABF73721A3D39C001B626F /* NN_Alert_Unit_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,40 +185,41 @@
 		3E44A7872182E7BD009DCED7 /* NN_Alert */ = {
 			isa = PBXGroup;
 			children = (
-				3E8AB08C21A2449700B29F61 /* Enums */,
-				A9877E38218E9D2100E797AE /* UIColor+Additions.swift */,
-				A9877E37218E9D2100E797AE /* UIFont+Additions.swift */,
+				3E8AB09821A28AE700B29F61 /* Actionsheet */,
+				3E8AB09721A28AD300B29F61 /* PopUps */,
+				3E8AB08C21A2449700B29F61 /* Object Models */,
 				3E44A7882182E7BD009DCED7 /* NN_Alert.h */,
 				3E44A7892182E7BD009DCED7 /* Info.plist */,
-				3E942BC92182E92C0058ED70 /* NN_Modal.swift */,
-				3E8AB09721A28AD300B29F61 /* PopUps */,
-				3E942BD22182F6190058ED70 /* Tempura.swift */,
+				3E40A6B621A37C7900307E9A /* Extension.swift */,
+				3E40A6B321A37C5300307E9A /* UIColor+Additions.swift */,
+				3E40A6B221A37C5200307E9A /* UIFont+Additions.swift */,
 				3E8AB09121A26D8000B29F61 /* Media.xcassets */,
-				3E8AB09821A28AE700B29F61 /* Actionsheet */,
 			);
 			path = NN_Alert;
 			sourceTree = "<group>";
 		};
-		3E8AB08C21A2449700B29F61 /* Enums */ = {
+		3E8AB08C21A2449700B29F61 /* Object Models */ = {
 			isa = PBXGroup;
 			children = (
+				3E8AB09521A283F000B29F61 /* NN_Action_Button.swift */,
 				3E8AB08A21A2447D00B29F61 /* NN_Alert_Steps.swift */,
 				3E8AB08821A2444D00B29F61 /* NN_Alert_Styles.swift */,
 				3E8AB08D21A2495F00B29F61 /* NN_Alert_Button.swift */,
 			);
-			path = Enums;
+			path = "Object Models";
 			sourceTree = "<group>";
 		};
 		3E8AB09721A28AD300B29F61 /* PopUps */ = {
 			isa = PBXGroup;
 			children = (
+				3E942BC92182E92C0058ED70 /* NN_Pop_Up_Modal.swift */,
 				3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */,
 				A917C9582183E49C0092D5FE /* NN_Pop_Up_Basic.swift */,
 				A9D0BD7021856D2D00C2E2DE /* NN_Pop_Up_Icon.swift */,
 				3E8AB08F21A26AFB00B29F61 /* NN_Pop_Up_Alert.swift */,
 				A9D0BD722185D08C00C2E2DE /* NN_Pop_Up_Binary.swift */,
 				A9FED21D2187270A000D2D08 /* NN_Pop_Up_Prompt.swift */,
-				A96A0F31218DA16D0097AAE8 /* NN_Progress_Steps.swift */,
+				A96A0F31218DA16D0097AAE8 /* NN_Pop_Up_Steps.swift */,
 			);
 			path = PopUps;
 			sourceTree = "<group>";
@@ -194,9 +227,9 @@
 		3E8AB09821A28AE700B29F61 /* Actionsheet */ = {
 			isa = PBXGroup;
 			children = (
-				3E8AB09321A27FD500B29F61 /* NN_ActionSheet.swift */,
-				3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Core.swift */,
-				3E8AB09521A283F000B29F61 /* NN_Action_Button.swift */,
+				3E8AB09921A28D3B00B29F61 /* NN_ActionSheet_Model.swift */,
+				3E8AB09321A27FD500B29F61 /* NN_ActionSheet_Core.swift */,
+				3EABF74221A3E36D001B626F /* NN_ActionSheet_Trigger.swift */,
 			);
 			path = Actionsheet;
 			sourceTree = "<group>";
@@ -214,11 +247,21 @@
 			path = NN_Alert_Demo;
 			sourceTree = "<group>";
 		};
+		3EABF73821A3D39C001B626F /* NN_Alert_Unit_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3EABF73921A3D39C001B626F /* NN_Alert_Unit_Tests.swift */,
+				3EABF73B21A3D39C001B626F /* Info.plist */,
+			);
+			path = NN_Alert_Unit_Tests;
+			sourceTree = "<group>";
+		};
 		7FEB86E5B76975541D5454E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				9A8E5488DB14FDFE09281345 /* Pods_NN_Alert.framework */,
 				F58AE43456BCF2B3CA8DF8E8 /* Pods_NN_Alert_Demo.framework */,
+				FB1CFFF18C7525AC2FB48EE9 /* Pods_NN_Alert_Unit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,13 +320,33 @@
 			productReference = 3E942B9B2182E8370058ED70 /* NN_Alert_Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3EABF73621A3D39C001B626F /* NN_Alert_Unit_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EABF73F21A3D39C001B626F /* Build configuration list for PBXNativeTarget "NN_Alert_Unit_Tests" */;
+			buildPhases = (
+				411F59F30B9C9F5F138BDD9A /* [CP] Check Pods Manifest.lock */,
+				3EABF73321A3D39C001B626F /* Sources */,
+				3EABF73421A3D39C001B626F /* Frameworks */,
+				3EABF73521A3D39C001B626F /* Resources */,
+				0DAE6FD7F8FFDD2E7F99A84F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EABF73E21A3D39C001B626F /* PBXTargetDependency */,
+			);
+			name = NN_Alert_Unit_Tests;
+			productName = NN_Alert_Unit_Tests;
+			productReference = 3EABF73721A3D39C001B626F /* NN_Alert_Unit_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3E44A77C2182E7BD009DCED7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = m3dicine;
 				TargetAttributes = {
@@ -293,6 +356,9 @@
 					};
 					3E942B9A2182E8370058ED70 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					3EABF73621A3D39C001B626F = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -311,6 +377,7 @@
 			targets = (
 				3E44A7842182E7BD009DCED7 /* NN_Alert */,
 				3E942B9A2182E8370058ED70 /* NN_Alert_Demo */,
+				3EABF73621A3D39C001B626F /* NN_Alert_Unit_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E8AB09221A26D8000B29F61 /* Media.xcassets in Resources */,
+				3EABF73221A39220001B626F /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,15 +395,67 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EABF73121A39142001B626F /* NN_Alert.framework in Resources */,
 				3E942BA82182E8380058ED70 /* LaunchScreen.storyboard in Resources */,
 				3E942BA52182E8380058ED70 /* Assets.xcassets in Resources */,
 				3E942BA32182E8370058ED70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EABF73521A3D39C001B626F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0DAE6FD7F8FFDD2E7F99A84F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NN_Alert_Unit_Tests/Pods-NN_Alert_Unit_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NN_Alert_Unit_Tests/Pods-NN_Alert_Unit_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		411F59F30B9C9F5F138BDD9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NN_Alert_Unit_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6188FFB85A68BC7F3ACC0CD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,23 +523,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E40A6B421A37C5300307E9A /* UIFont+Additions.swift in Sources */,
 				3E8AB08B21A2447D00B29F61 /* NN_Alert_Steps.swift in Sources */,
-				3E8AB09421A27FD500B29F61 /* NN_ActionSheet.swift in Sources */,
-				A96A0F32218DA16D0097AAE8 /* NN_Progress_Steps.swift in Sources */,
+				3E8AB09421A27FD500B29F61 /* NN_ActionSheet_Core.swift in Sources */,
+				A96A0F32218DA16D0097AAE8 /* NN_Pop_Up_Steps.swift in Sources */,
 				3E8AB08921A2444D00B29F61 /* NN_Alert_Styles.swift in Sources */,
-				A9877E3A218E9D2100E797AE /* UIColor+Additions.swift in Sources */,
 				3E8AB09621A283F000B29F61 /* NN_Action_Button.swift in Sources */,
-				A9877E39218E9D2100E797AE /* UIFont+Additions.swift in Sources */,
+				3EABF74321A3E36D001B626F /* NN_ActionSheet_Trigger.swift in Sources */,
 				3E942BCC2182E9930058ED70 /* NN_Pop_Up_Core.swift in Sources */,
-				3E8AB09A21A28D3B00B29F61 /* NN_ActionSheet_Core.swift in Sources */,
-				3E942BCA2182E92C0058ED70 /* NN_Modal.swift in Sources */,
+				3E8AB09A21A28D3B00B29F61 /* NN_ActionSheet_Model.swift in Sources */,
+				3E942BCA2182E92C0058ED70 /* NN_Pop_Up_Modal.swift in Sources */,
 				3E8AB09021A26AFB00B29F61 /* NN_Pop_Up_Alert.swift in Sources */,
-				3E942BD32182F6190058ED70 /* Tempura.swift in Sources */,
+				3E40A6B721A37C7900307E9A /* Extension.swift in Sources */,
 				A9D0BD7121856D2D00C2E2DE /* NN_Pop_Up_Icon.swift in Sources */,
 				3E8AB08E21A2495F00B29F61 /* NN_Alert_Button.swift in Sources */,
 				A9FED21E2187270A000D2D08 /* NN_Pop_Up_Prompt.swift in Sources */,
 				A917C9592183E49C0092D5FE /* NN_Pop_Up_Basic.swift in Sources */,
 				A9D0BD732185D08C00C2E2DE /* NN_Pop_Up_Binary.swift in Sources */,
+				3E40A6B521A37C5300307E9A /* UIColor+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +553,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3EABF73321A3D39C001B626F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EABF73A21A3D39C001B626F /* NN_Alert_Unit_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -440,6 +568,11 @@
 			isa = PBXTargetDependency;
 			target = 3E44A7842182E7BD009DCED7 /* NN_Alert */;
 			targetProxy = 3E942BCF2182F0C90058ED70 /* PBXContainerItemProxy */;
+		};
+		3EABF73E21A3D39C001B626F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E44A7842182E7BD009DCED7 /* NN_Alert */;
+			targetProxy = 3EABF73D21A3D39C001B626F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -682,6 +815,46 @@
 			};
 			name = Release;
 		};
+		3EABF74021A3D39C001B626F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B227946EA4AE75DF2F48203 /* Pods-NN_Alert_Unit_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J5NKKT78R;
+				INFOPLIST_FILE = NN_Alert_Unit_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EABF74121A3D39C001B626F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71069A1BA08EA75CC28BF21F /* Pods-NN_Alert_Unit_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9J5NKKT78R;
+				INFOPLIST_FILE = NN_Alert_Unit_Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -708,6 +881,15 @@
 			buildConfigurations = (
 				3E942BC02182E8380058ED70 /* Debug */,
 				3E942BC12182E8380058ED70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EABF73F21A3D39C001B626F /* Build configuration list for PBXNativeTarget "NN_Alert_Unit_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EABF74021A3D39C001B626F /* Debug */,
+				3EABF74121A3D39C001B626F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

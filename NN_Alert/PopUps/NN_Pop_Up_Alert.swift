@@ -10,29 +10,31 @@ import Foundation
 public class NN_Pop_Up_Alert:NN_Pop_Up_Binary_Options{
 
     public convenience init(type:NN_Alert_Type,title:String, detail:String? = nil,btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil) {
-        var statusImage = #imageLiteral(resourceName: "aida")
+        var statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "loading"))
         var animated = false
         switch type {
         case .caution:
-            statusImage = #imageLiteral(resourceName: "warning")
+            statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "warning"))
             break
         case .fail:
-            statusImage = #imageLiteral(resourceName: "error")
+            statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "error"))
             break
         case .info:
-            statusImage = #imageLiteral(resourceName: "info")
+            statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "info"))
             break
         case .successfull:
-            statusImage = #imageLiteral(resourceName: "success")
+            statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "success"))
             break
         case .prompt:
-            statusImage = #imageLiteral(resourceName: "prompt")
+            statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "prompt"))
             break
         case .working:
-            statusImage = #imageLiteral(resourceName: "loading")
+            statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "loading"))
             animated = true
             break
         }
         self.init(title:title,detail:detail,image:statusImage,animate:animated,btnOne:btnOne,btnTwo:btnTwo)
     }
 }
+
+
