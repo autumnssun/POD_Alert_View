@@ -9,7 +9,7 @@
 import Foundation
 public class NN_Pop_Up_Alert:NN_Pop_Up_Binary_Options{
 
-    public convenience init(type:NN_Alert_Type,title:String, detail:String? = nil,btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil) {
+    public init(type:NN_Alert_Type,title:String, detail:String? = nil,btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil) {
         var statusImage = UIImage.fromWrappedBundleImage(#imageLiteral(resourceName: "loading"))
         var animated = false
         switch type {
@@ -33,7 +33,11 @@ public class NN_Pop_Up_Alert:NN_Pop_Up_Binary_Options{
             animated = true
             break
         }
-        self.init(title:title,detail:detail,image:statusImage,animate:animated,btnOne:btnOne,btnTwo:btnTwo)
+        super.init(title:title,detail:detail,image:statusImage,animate:animated,btnOne:btnOne,btnTwo:btnTwo)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 

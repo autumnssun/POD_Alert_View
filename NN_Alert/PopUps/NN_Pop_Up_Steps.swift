@@ -8,13 +8,13 @@
 
 import Foundation
 public class NN_Pop_Up_Steps:NN_Pop_Up_Binary_Options{
-    public convenience init(title:String,
+    public init(title:String,
                             steps:[Step],
                             detail:String? = nil,
                             image:UIImage? = nil,
                             animate:Bool? = false,
                             btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil){
-        self.init(title: title,
+        super.init(title: title,
                   detail: detail,
                   image: image,
                   animate: animate,
@@ -22,6 +22,11 @@ public class NN_Pop_Up_Steps:NN_Pop_Up_Binary_Options{
         setupStep(steps:steps)
 
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setupStep(steps:[Step]){
         for step in steps{
             self.textStacks.addArrangedSubview(step)

@@ -8,6 +8,9 @@
 
 import Foundation
 import Material
+
+public typealias NN_CompletionCallback = ()->()
+
 public enum NN_Btn_Style{
     case destructive
     case emphasize
@@ -87,3 +90,5 @@ public class NN_Button:RaisedButton{
     }
     
 }
+
+

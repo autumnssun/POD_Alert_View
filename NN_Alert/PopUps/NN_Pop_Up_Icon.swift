@@ -10,16 +10,18 @@ import Foundation
 
 public class NN_Pop_Up_Icon:NN_Pop_Up_Basic{
     var imageView = UIImageView()
-    public convenience init(title:String,
+    public init(title:String,
                             detail:String? = nil,
                             image:UIImage? = nil,
                             animate:Bool? = false) {
-        self.init()
+        super.init(title:title,detail:detail)
         self.setupIcon(image:image,animate:animate!)
-        self.setupTitle(title:title,detail:detail)
     }
     
-    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     func setupIcon(image:UIImage?, animate:Bool){
         if let img = image {
             containerView.insertArrangedSubview(imageView,at: 0)

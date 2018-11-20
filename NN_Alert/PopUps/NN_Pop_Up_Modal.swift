@@ -30,6 +30,7 @@ public protocol NN_Pop_Up_Modal {
     var containerView:UIStackView {get set}
     var textStacks:UIStackView {get set}
     var btnStacks:UIStackView {get set}
+    var callback:NN_CompletionCallback?{get}
 }
 
 
@@ -83,6 +84,9 @@ public extension NN_Pop_Up_Modal where Self:UIView{
             })
         }else{
             self.removeFromSuperview()
+        }
+        if let completed = callback{
+            completed()
         }
     }
     

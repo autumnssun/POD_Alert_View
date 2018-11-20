@@ -16,17 +16,14 @@ public class NN_Pop_Up_Core: UIView, NN_Pop_Up_Modal {
     public var containerView = UIStackView()
     public var textStacks = UIStackView()
     public var btnStacks = UIStackView()
-    
-    public convenience init() {
-        self.init(frame: UIScreen.main.bounds)
+    public var callback: NN_CompletionCallback?
+    public init(completed:NN_CompletionCallback? = nil) {
+        super.init(frame: UIScreen.main.bounds)
         setUpStage(backgroundTappedAction:#selector(didTappedOnBackgroundView))
         setUpKeyboardManager(view: self,
                              keyboardWillDisappearSelector: #selector(keyboardWillDisappearSelector),
                              keyboardWillAppearSelector: #selector(keyboardWillDisappearSelector))
-    }
-
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+        self.callback = completed
     }
     
     public required init?(coder aDecoder: NSCoder) {

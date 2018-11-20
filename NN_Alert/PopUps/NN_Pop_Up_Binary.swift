@@ -19,17 +19,20 @@ public class NN_Pop_Up_Binary_Options:NN_Pop_Up_Icon{
         }
     }
     
-    convenience init(title:String,
+    public init(title:String,
                             detail:String? = nil,
                             image:UIImage? = nil,
                             animate:Bool? = false,
                             btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil) {
-        self.init()
+        super.init(title: title, detail: detail, image: image, animate: animate)
         self.setupIcon(image:image,animate:animate!)
-        self.setupTitle(title:title,detail:detail)
         self.buttonOne = btnOne
         self.buttonTwo = btnTwo
         self.setupBtns(btns:[btnOne,btnTwo])
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setupBtns(btns:[NN_Button?]){

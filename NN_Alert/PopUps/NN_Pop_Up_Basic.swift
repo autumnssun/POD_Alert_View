@@ -9,11 +9,14 @@
 import Foundation
 import Material
 public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
-    
 
-    public convenience init(title:String,detail:String? = nil) {
-        self.init()
+    public init(title:String,detail:String? = nil) {
+        super.init()
         self.setupTitle(title:title,detail:detail)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     func setupTitle(title:String,detail:String?){
         let titleLabel = UILabel()

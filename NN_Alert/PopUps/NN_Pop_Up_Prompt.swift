@@ -12,7 +12,7 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary_Options{
     let promptTextField:ErrorTextField = ErrorTextField()
     var actionExecutioner:UIResponder?
     var actionSelector:Selector?
-    public convenience init(title:String,
+    public init(title:String,
                             detail:String? = nil,
                             image:UIImage? = nil,
                             animate:Bool? = false,
@@ -23,7 +23,7 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary_Options{
                             actionSelector:Selector? = nil,
                             actionExecutioner:UIResponder? = nil) {
         
-        self.init(title: title, detail: detail, image: image, animate: animate)
+        super.init(title: title, detail: detail, image: image, animate: animate)
         
         let btnOne:NN_Button? = NN_Button(label: dismisBtnLabel, btnStyle: NN_Btn_Style.normal, action: #selector(dismissBtnDidTapped), executioner: self)
         let btnTwo:NN_Button? = NN_Button(label: actionBtnLabel, btnStyle: NN_Btn_Style.emphasize, action: #selector(executePromptAction), executioner: self)
@@ -32,6 +32,10 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary_Options{
         self.actionExecutioner = actionExecutioner
         self.actionSelector = actionSelector
         self.setupPrompt(promptPlaceHolder: promptPlaceHolder, promptPrefill: promptPrefill)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setupPrompt(promptPlaceHolder:String?, promptPrefill:String?){
