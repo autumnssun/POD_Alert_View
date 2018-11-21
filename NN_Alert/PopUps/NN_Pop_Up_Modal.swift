@@ -20,7 +20,9 @@ public class NN_Pop_Up_Manager{
 
 
 public protocol NN_Pop_Up_Modal {
-    func show(animated:Bool,timeOutDuration:TimeInterval?,completed:NN_CompletionCallback?)
+    func show(animated:Bool,
+              timeOutDuration:TimeInterval?,
+              completed:NN_CompletionCallback?)
     func dismiss(animated:Bool,cancelCallback:Bool?)
     func setUpStage(backgroundTappedAction:Selector)
 
@@ -31,22 +33,23 @@ public protocol NN_Pop_Up_Modal {
     var btnStacks:UIStackView {get set}
     var cancelCallback:Bool{get set}
     var callback:NN_CompletionCallback?{get set}
+    var dismissible:Bool{get set}
 }
 
 
 public extension NN_Pop_Up_Modal where Self:UIView{
- 
-
-    
     
     func setUpStage(backgroundTappedAction:Selector){
         addSubview(backgroundView)
         addSubview(dialogView)
         
+        if self.dismissible{
+            backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: backgroundTappedAction))
+        }
+        
         backgroundView.frame = frame
         backgroundView.backgroundColor = UIColor.black
         backgroundView.alpha = 0.6
-        backgroundView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: backgroundTappedAction))
         
         dialogView.clipsToBounds = true
         dialogView.layer.cornerRadius = 6

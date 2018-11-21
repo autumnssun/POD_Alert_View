@@ -13,8 +13,9 @@ public class NN_Pop_Up_Icon:NN_Pop_Up_Basic{
     public init(title:String,
                 detail:String? = nil,
                 image:UIImage? = nil,
-                animate:Bool? = false) {
-        super.init(title:title,detail:detail)
+                animate:Bool? = false,
+                dismissible:Bool? = true) {
+        super.init(title:title,detail:detail,dismissible:dismissible)
         self.setupIcon(image:image,animate:animate!)
     }
     

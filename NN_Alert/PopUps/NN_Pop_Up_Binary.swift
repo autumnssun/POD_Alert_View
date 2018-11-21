@@ -30,7 +30,8 @@ public class NN_Pop_Up_Binary_Options:NN_Pop_Up_Icon{
         super.init(title: title,
                    detail: detail,
                    image: image,
-                   animate: animate)
+                   animate: animate,
+                   dismissible:false)
         
         self.buttonOne = btnOne
         self.buttonTwo = btnTwo

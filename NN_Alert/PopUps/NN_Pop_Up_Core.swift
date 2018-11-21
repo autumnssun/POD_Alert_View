@@ -20,11 +20,12 @@ public class NN_Pop_Up_Core: UIView, NN_Pop_Up_Modal {
     public var btnStacks = UIStackView()
     public var callback: NN_CompletionCallback?
     public var cancelCallback: Bool = false
-
-    public init() {
+    public var dismissible:Bool = true
+    
+    public init(dismissible:Bool? = true) {
         super.init(frame: UIScreen.main.bounds)
-        setUpStage(backgroundTappedAction:#selector(shouldDismiss))
-      
+        self.dismissible = dismissible!
+        setUpStage(backgroundTappedAction:#selector(shouldDismiss))      
     }
     
     public required init?(coder aDecoder: NSCoder) {
