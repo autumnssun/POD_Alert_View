@@ -69,8 +69,11 @@ class ViewController: UIViewController,NN_ActionSheet_Delegate{
                 alert.show(animated: false,timeOutDuration: 5)
 
             }else{
-                let alert = NN_Pop_Up_Alert(type: .fail, title: "OH no", detail:"something wrong")
-                alert.show(animated: false,timeOutDuration: 5)
+                let alert = NN_Pop_Up_Alert(type: .fail, title: "Ohno", detail: "somthing wrong", btnOne: nil, btnTwo: nil, completed: {
+                    print("completed")
+                })
+
+                alert.show(animated: false)
 
             }
         }
