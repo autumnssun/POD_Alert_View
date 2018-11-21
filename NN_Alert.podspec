@@ -32,7 +32,7 @@ TODO: Add long description of the pod here.
   s.swift_version = '4.2'
 
   s.source_files = 'NN_Alert/**/*'
-  s.source_files = 'NN_Alert/**/*.{h,m,swift,xcdatamodeld}'
+  s.source_files = 'NN_Alert/**/*.{h,m,swift,xcassets}'
 
   # s.resource_bundles = {
   #   'NN_Alert_Views' => ['NN_Alert_Views/Assets/*.png']
