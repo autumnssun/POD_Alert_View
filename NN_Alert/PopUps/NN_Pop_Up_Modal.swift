@@ -20,8 +20,7 @@ public class NN_Pop_Up_Manager{
 
 
 public protocol NN_Pop_Up_Modal {
-    func show(animated:Bool,timeOutDuration:TimeInterval?)
-    func show_animated_timeOut()
+    func show(animated:Bool,timeOutDuration:TimeInterval?,completed:NN_CompletionCallback?)
     func dismiss(animated:Bool)
     func setUpStage(backgroundTappedAction:Selector)
 
@@ -30,45 +29,13 @@ public protocol NN_Pop_Up_Modal {
     var containerView:UIStackView {get set}
     var textStacks:UIStackView {get set}
     var btnStacks:UIStackView {get set}
-    var callback:NN_CompletionCallback?{get}
+    var callback:NN_CompletionCallback?{get set}
 }
 
 
 public extension NN_Pop_Up_Modal where Self:UIView{
  
-    public func show_animated_timeOut(){
-        self.show(animated: true,timeOutDuration: 5)
-    }
-    public func show(animated:Bool,timeOutDuration:TimeInterval? = nil){
-        self.backgroundView.alpha = 0
-        self.dialogView.center = CGPoint(x: self.center.x, y: self.frame.height + self.dialogView.frame.height/2)
-        UIApplication.shared.delegate?.window??.rootViewController?.view.addSubview(self)
-        if animated {
-            UIView.animate(withDuration: 0.33, animations: {
-                self.backgroundView.alpha = 0.66
-            })
-            UIView.animate(withDuration: 0.33,
-                           delay: 0,
-                           usingSpringWithDamping: 0.7,
-                           initialSpringVelocity: 10,
-                           options: UIView.AnimationOptions(rawValue: 0),
-                           animations: {
-                            self.dialogView.center  = self.center
-            }, completion: { (completed) in
-                
-            })
-        }else{
-            self.backgroundView.alpha = 0.66
-            self.dialogView.center  = self.center
-        }
-        
-        if let waitDuration = timeOutDuration{
-            self.backgroundView.isUserInteractionEnabled = false
-            Timer.scheduledTimer(withTimeInterval: waitDuration, repeats: false) { (timer) in
-                self.dismiss(animated: false)
-            }
-        }
-    }
+
     
     public func dismiss(animated:Bool){
         if animated {
