@@ -10,8 +10,8 @@ import Foundation
 import Material
 public class NN_Pop_Up_Basic:NN_Pop_Up_Core{
 
-    public init(title:String,detail:String? = nil) {
-        super.init()
+    public init(title:String,detail:String? = nil,completed:NN_CompletionCallback?=nil) {
+        super.init(completed:completed)
         self.setupTitle(title:title,detail:detail)
     }
     

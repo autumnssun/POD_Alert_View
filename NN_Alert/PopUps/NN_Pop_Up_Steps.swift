@@ -9,18 +9,23 @@
 import Foundation
 public class NN_Pop_Up_Steps:NN_Pop_Up_Binary_Options{
     public init(title:String,
-                            steps:[Step],
-                            detail:String? = nil,
-                            image:UIImage? = nil,
-                            animate:Bool? = false,
-                            btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil){
-        super.init(title: title,
-                  detail: detail,
-                  image: image,
-                  animate: animate,
-                  btnOne:btnOne,btnTwo:btnTwo)
-        setupStep(steps:steps)
+                steps:[Step],
+                detail:String? = nil,
+                image:UIImage? = nil,
+                animate:Bool? = false,
+                btnOne:NN_Button? = nil,
+                btnTwo:NN_Button? = nil,
+                completed:NN_CompletionCallback? = nil){
 
+        super.init(title: title,
+                   detail: detail,
+                   image: image,
+                   animate: animate,
+                   btnOne:btnOne,
+                   btnTwo:btnTwo,
+                   completed:completed)
+        setupStep(steps:steps)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

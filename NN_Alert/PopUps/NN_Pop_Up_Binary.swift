@@ -20,12 +20,19 @@ public class NN_Pop_Up_Binary_Options:NN_Pop_Up_Icon{
     }
     
     public init(title:String,
-                            detail:String? = nil,
-                            image:UIImage? = nil,
-                            animate:Bool? = false,
-                            btnOne:NN_Button? = nil,btnTwo:NN_Button? = nil) {
-        super.init(title: title, detail: detail, image: image, animate: animate)
-        self.setupIcon(image:image,animate:animate!)
+                detail:String? = nil,
+                image:UIImage? = nil,
+                animate:Bool? = false,
+                btnOne:NN_Button? = nil,
+                btnTwo:NN_Button? = nil,
+                completed:NN_CompletionCallback? = nil) {
+        
+        super.init(title: title,
+                   detail: detail,
+                   image: image,
+                   animate: animate,
+                   completed:completed)
+        
         self.buttonOne = btnOne
         self.buttonTwo = btnTwo
         self.setupBtns(btns:[btnOne,btnTwo])
