@@ -88,7 +88,7 @@ public class NN_Button:RaisedButton{
     }
     
     @objc func executeAction(){
-        self.host_alert?.dismiss(animated: true)
+        self.host_alert?.dismiss(animated: true, cancelCallback: true)
         self.executioner?.perform(action)
     }
     

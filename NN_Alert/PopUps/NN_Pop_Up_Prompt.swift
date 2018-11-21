@@ -25,7 +25,7 @@ public class NN_Pop_Up_Prompt:NN_Pop_Up_Binary_Options{
                 completed:NN_CompletionCallback? = nil) {
         
         super.init(title: title, detail: detail, image: image, animate: animate,completed:completed)
-        let btnOne:NN_Button? = NN_Button(label: dismisBtnLabel, btnStyle: NN_Btn_Style.normal, action: #selector(dismissBtnDidTapped), executioner: self)
+        let btnOne:NN_Button? = NN_Button(label: dismisBtnLabel, btnStyle: NN_Btn_Style.normal, action: #selector(shouldDismiss), executioner: self)
         let btnTwo:NN_Button? = NN_Button(label: actionBtnLabel, btnStyle: NN_Btn_Style.emphasize, action: #selector(executePromptAction), executioner: self)
         self.buttonTwo = btnTwo
         self.buttonOne = btnOne

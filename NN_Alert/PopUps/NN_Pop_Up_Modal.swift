@@ -21,7 +21,7 @@ public class NN_Pop_Up_Manager{
 
 public protocol NN_Pop_Up_Modal {
     func show(animated:Bool,timeOutDuration:TimeInterval?,completed:NN_CompletionCallback?)
-    func dismiss(animated:Bool)
+    func dismiss(animated:Bool,cancelCallback:Bool?)
     func setUpStage(backgroundTappedAction:Selector)
 
     var backgroundView:UIView {get}
@@ -29,6 +29,7 @@ public protocol NN_Pop_Up_Modal {
     var containerView:UIStackView {get set}
     var textStacks:UIStackView {get set}
     var btnStacks:UIStackView {get set}
+    var cancelCallback:Bool{get set}
     var callback:NN_CompletionCallback?{get set}
 }
 
@@ -36,31 +37,6 @@ public protocol NN_Pop_Up_Modal {
 public extension NN_Pop_Up_Modal where Self:UIView{
  
 
-    
-    public func dismiss(animated:Bool){
-        if animated {
-            UIView.animate(withDuration: 0.33, animations: {
-                self.backgroundView.alpha = 0
-            }, completion: { (completed) in
-                
-            })
-            UIView.animate(withDuration: 0.33, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 10, options: UIView.AnimationOptions(rawValue: 0), animations: {
-                self.dialogView.center = CGPoint(x: self.center.x, y: self.frame.height + self.dialogView.frame.height/2)
-            }, completion: { (completed) in
-                self.removeFromSuperview()
-            })
-        }else{
-            self.removeFromSuperview()
-        }
-        if let completed = callback{
-            completed()
-        }
-    }
-    
-    func setUpKeyboardManager(view:UIView,keyboardWillDisappearSelector:Selector,keyboardWillAppearSelector:Selector){
-        NotificationCenter.default.addObserver(view, selector: keyboardWillDisappearSelector, name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(view, selector: keyboardWillAppearSelector, name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
     
     
     func setUpStage(backgroundTappedAction:Selector){
@@ -122,7 +98,16 @@ public extension NN_Pop_Up_Modal where Self:UIView{
         
     }
     
-    func adjustViewWithKeyboard(_ notification:Notification){
-        print(notification)
-    }
+    
+    
+//
+//    func setUpKeyboardManager(view:UIView,keyboardWillDisappearSelector:Selector,keyboardWillAppearSelector:Selector){
+//        NotificationCenter.default.addObserver(view, selector: keyboardWillDisappearSelector, name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(view, selector: keyboardWillAppearSelector, name: UIResponder.keyboardWillShowNotification, object: nil)
+//    }
+//
+//
+//    func adjustViewWithKeyboard(_ notification:Notification){
+//        print(notification)
+//    }
 }
