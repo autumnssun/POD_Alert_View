@@ -22,9 +22,9 @@ target 'NN_Alert_Demo' do
     use_frameworks!
     shared
     pod 'IQKeyboardManager'
-    
-    # Pods for NN_Alert_Demo
-    
+  3w.git'
+
+
 end
 
 target 'NN_Alert_Unit_Tests' do

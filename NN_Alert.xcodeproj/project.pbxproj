@@ -25,9 +25,6 @@
 		3E942BA82182E8380058ED70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E942BA62182E8380058ED70 /* LaunchScreen.storyboard */; };
 		3E942BCA2182E92C0058ED70 /* NN_Pop_Up_Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942BC92182E92C0058ED70 /* NN_Pop_Up_Modal.swift */; };
 		3E942BCC2182E9930058ED70 /* NN_Pop_Up_Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E942BCB2182E9930058ED70 /* NN_Pop_Up_Core.swift */; };
-		3E942BCD2182F0C90058ED70 /* NN_Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; };
-		3E942BCE2182F0C90058ED70 /* NN_Alert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3EABF73121A39142001B626F /* NN_Alert.framework in Resources */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; };
 		3EABF73221A39220001B626F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AB09121A26D8000B29F61 /* Media.xcassets */; };
 		3EABF73A21A3D39C001B626F /* NN_Alert_Unit_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EABF73921A3D39C001B626F /* NN_Alert_Unit_Tests.swift */; };
 		3EABF73C21A3D39C001B626F /* NN_Alert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E44A7852182E7BD009DCED7 /* NN_Alert.framework */; };
@@ -43,13 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3E942BCF2182F0C90058ED70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E44A77C2182E7BD009DCED7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3E44A7842182E7BD009DCED7;
-			remoteInfo = NN_Alert;
-		};
 		3EABF73D21A3D39C001B626F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3E44A77C2182E7BD009DCED7 /* Project object */;
@@ -58,20 +48,6 @@
 			remoteInfo = NN_Alert;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3E942BD12182F0C90058ED70 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3E942BCE2182F0C90058ED70 /* NN_Alert.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B227946EA4AE75DF2F48203 /* Pods-NN_Alert_Unit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NN_Alert_Unit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NN_Alert_Unit_Tests/Pods-NN_Alert_Unit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +107,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A779BF730D123D8D01E9EA /* Pods_NN_Alert_Demo.framework in Frameworks */,
-				3E942BCD2182F0C90058ED70 /* NN_Alert.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,12 +283,10 @@
 				3E942B982182E8370058ED70 /* Frameworks */,
 				3E942B992182E8370058ED70 /* Resources */,
 				D067C8A8B51173865D96DADB /* [CP] Embed Pods Frameworks */,
-				3E942BD12182F0C90058ED70 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3E942BD02182F0C90058ED70 /* PBXTargetDependency */,
 			);
 			name = NN_Alert_Demo;
 			productName = NN_Alert_Demo;
@@ -395,7 +368,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EABF73121A39142001B626F /* NN_Alert.framework in Resources */,
 				3E942BA82182E8380058ED70 /* LaunchScreen.storyboard in Resources */,
 				3E942BA52182E8380058ED70 /* Assets.xcassets in Resources */,
 				3E942BA32182E8370058ED70 /* Main.storyboard in Resources */,
@@ -485,6 +457,7 @@
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/NN_PIN_View/NN_PIN_View.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -492,6 +465,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NN_PIN_View.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -564,11 +538,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3E942BD02182F0C90058ED70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3E44A7842182E7BD009DCED7 /* NN_Alert */;
-			targetProxy = 3E942BCF2182F0C90058ED70 /* PBXContainerItemProxy */;
-		};
 		3EABF73E21A3D39C001B626F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3E44A7842182E7BD009DCED7 /* NN_Alert */;
@@ -733,11 +702,7 @@
 				INFOPLIST_FILE = NN_Alert/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -762,11 +727,7 @@
 				INFOPLIST_FILE = NN_Alert/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -779,15 +740,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 682A399E025E4C500D1A10E1 /* Pods-NN_Alert_Demo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J5NKKT78R;
 				INFOPLIST_FILE = NN_Alert_Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -799,15 +756,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB3BD66DEC7EADE75C3B074E /* Pods-NN_Alert_Demo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9J5NKKT78R;
 				INFOPLIST_FILE = NN_Alert_Demo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -823,11 +776,7 @@
 				DEVELOPMENT_TEAM = 9J5NKKT78R;
 				INFOPLIST_FILE = NN_Alert_Unit_Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Unit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -843,11 +792,7 @@
 				DEVELOPMENT_TEAM = 9J5NKKT78R;
 				INFOPLIST_FILE = NN_Alert_Unit_Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.m3dicine.apps.NN-Alert-Unit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

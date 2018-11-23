@@ -65,7 +65,7 @@ public class NN_Pop_Up_Core: UIView, NN_Pop_Up_Modal {
         self.backgroundView.alpha = 0
         self.callback = completed
         self.dialogView.center = CGPoint(x: self.center.x, y: self.frame.height + self.dialogView.frame.height/2)
-        UIApplication.shared.delegate?.window??.rootViewController?.view.addSubview(self)
+        self.topViewController?.view.addSubview(self)
         if animated {
             UIView.animate(withDuration: 0.33, animations: {
                 self.backgroundView.alpha = 0.66

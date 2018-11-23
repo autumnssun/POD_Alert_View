@@ -8,13 +8,28 @@
 
 import Foundation
 public extension UIView{
-    func rotateView(targetView: UIView, duration: Double = 0.5) {
+    open func rotateView(targetView: UIView, duration: Double = 0.5) {
         UIView.animate(withDuration: duration, delay: 0.0, options: .curveLinear, animations: {
             targetView.transform = targetView.transform.rotated(by: .pi)
         }) { finished in
             self.rotateView(targetView: targetView, duration: duration)
         }
     }
+    
+    
+    open var topViewController:UIViewController?{
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            return topController
+        }
+        else{
+            return nil
+        }
+    }
+
+
 }
 
 
@@ -31,3 +46,6 @@ public struct WrappedBundleImage: _ExpressibleByImageLiteral {
         image = UIImage(named: name, in: bundle, compatibleWith: nil)
     }
 }
+
+
+
