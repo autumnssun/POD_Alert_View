@@ -7,6 +7,7 @@ end
 def shared
     pod 'SnapKit'
     pod 'Material'
+    pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
 end
 
 target 'NN_Alert' do
@@ -22,8 +23,6 @@ target 'NN_Alert_Demo' do
     use_frameworks!
     shared
     pod 'IQKeyboardManager'
-  3w.git'
-
 
 end
 

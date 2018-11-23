@@ -80,10 +80,14 @@ class ViewController: UIViewController,NN_ActionSheet_Delegate{
     }
     
     @IBAction func showActionSheet(_ sender: Any) {
-        
+        let alert = NN_Pop_Up_Email_Prompt(title: "Hey", promptPlaceHolder: "Email", promptPrefill: "hey", dismisBtnLabel: "cancel", actionBtnLabel: "OK", actionSelector: #selector(hey), actionExecutioner: self, requiredErroMessager: "Required", emailFormatError: "email format")
+        alert.show(animated: true)
         
     }
     
+    @objc func hey(text:String){
+        print("String")
+    }
     
     func actionCommited(actionSheet: NN_ActionSheet_Core, commitedAction: [NN_Action_Sheet_Item]) {
         for i in commitedAction{

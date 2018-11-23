@@ -8,18 +8,17 @@ PODS:
     - Motion/Core (= 1.4.3)
   - Motion/Core (1.4.3)
   - Nimble (7.3.1)
-  - NN_PIN_View (0.0.1):
-    - SnapKit (~> 4.0.0)
   - Quick (1.3.2)
   - SnapKit (4.0.1)
+  - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
   - IQKeyboardManager
   - Material
   - Nimble
-  - "NN_PIN_View (from `git@github.com:autumnssun/POD_PIN_View.git`)"
   - Quick
   - SnapKit
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -31,23 +30,24 @@ SPEC REPOS:
     - SnapKit
 
 EXTERNAL SOURCES:
-  NN_PIN_View:
-    :git: "git@github.com:autumnssun/POD_PIN_View.git"
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
 
 CHECKOUT OPTIONS:
-  NN_PIN_View:
-    :commit: 6f74cacc1233bd13d606f4707d916c9b0fca2194
-    :git: "git@github.com:autumnssun/POD_PIN_View.git"
+  SwiftValidator:
+    :commit: c0ee801a2d107eca5f748d07932b449666d8effd
+    :git: https://github.com/jpotts18/SwiftValidator.git
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 6194101620b73af5e67900b8f89707a99de0b804
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
-  NN_PIN_View: 1b20a2db4794f9fbca7956abd8c36108d1e1c2b7
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
-PODFILE CHECKSUM: b78179436a8c9623f42504bca0b1d8ad7d878faa
+PODFILE CHECKSUM: cf98d6630a1083ac2aab6329f9921eafda0cb329
 
 COCOAPODS: 1.5.3
