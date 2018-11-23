@@ -14,16 +14,14 @@ public class NN_Pop_Up_Steps:NN_Pop_Up_Binary_Options{
                 image:UIImage? = nil,
                 animate:Bool? = false,
                 btnOne:NN_Button? = nil,
-                btnTwo:NN_Button? = nil,
-                completed:NN_CompletionCallback? = nil){
+                btnTwo:NN_Button? = nil){
 
         super.init(title: title,
                    detail: detail,
                    image: image,
                    animate: animate,
                    btnOne:btnOne,
-                   btnTwo:btnTwo,
-                   completed:completed)
+                   btnTwo:btnTwo)
         setupStep(steps:steps)
         
     }

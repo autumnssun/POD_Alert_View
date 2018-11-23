@@ -24,8 +24,7 @@ public class NN_Pop_Up_Binary_Options:NN_Pop_Up_Icon{
                 image:UIImage? = nil,
                 animate:Bool? = false,
                 btnOne:NN_Button? = nil,
-                btnTwo:NN_Button? = nil,
-                completed:NN_CompletionCallback? = nil) {
+                btnTwo:NN_Button? = nil) {
         
         super.init(title: title,
                    detail: detail,

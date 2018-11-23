@@ -44,8 +44,7 @@ public class NN_Pop_Up_Alert:NN_Pop_Up_Binary_Options{
                    image:statusImage,
                    animate:animated,
                    btnOne:btnOne,
-                   btnTwo:btnTwo,
-                   completed:completed)
+                   btnTwo:btnTwo)
     }
     
     required init?(coder aDecoder: NSCoder) {
