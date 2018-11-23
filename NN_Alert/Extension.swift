@@ -28,8 +28,6 @@ public extension UIView{
             return nil
         }
     }
-
-
 }
 
 
@@ -46,6 +44,3 @@ public struct WrappedBundleImage: _ExpressibleByImageLiteral {
         image = UIImage(named: name, in: bundle, compatibleWith: nil)
     }
 }
-
-
-

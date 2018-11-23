@@ -26,7 +26,7 @@ public class NN_Button:RaisedButton{
     var host_alert:NN_Pop_Up_Modal?
     var button_style:NN_Btn_Style?
     public init(label:String,
-                btnStyle:NN_Btn_Style?,
+                btnStyle:NN_Btn_Style? = .normal,
                 action:Selector? = nil,
                 executioner:UIResponder?=nil){
         super.init(title: label)
