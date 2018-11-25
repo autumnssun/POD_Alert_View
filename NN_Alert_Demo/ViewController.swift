@@ -86,7 +86,7 @@ class ViewController: UIViewController,NN_ActionSheet_Delegate{
     }
     
     @objc func hey(text:String){
-        print("String")
+        print(text)
     }
     
     func actionCommited(actionSheet: NN_ActionSheet_Core, commitedAction: [NN_Action_Sheet_Item]) {

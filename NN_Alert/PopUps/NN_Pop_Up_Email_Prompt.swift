@@ -18,15 +18,10 @@ public class NN_Pop_Up_Email_Prompt:NN_Pop_Up_Prompt{
                 actionBtnLabel:String,
                 actionSelector:Selector? = nil,
                 actionExecutioner:UIResponder? = nil,
-                requiredErroMessager:String? = nil,
-                emailFormatError:String? = nil){
+                requiredErroMessager:String,
+                emailFormatError:String){
         
-        super.init(title: title, detail: detail, image: image, animate: animate, promptPlaceHolder: promptPlaceHolder, promptPrefill: promptPrefill, dismisBtnLabel: dismisBtnLabel, actionBtnLabel: actionBtnLabel, actionSelector: actionSelector, actionExecutioner: actionExecutioner,requiredErroMessager:requiredErroMessager)
-    
-        if let errorFormat = requiredErroMessager{
-            validator.registerField(promptTextField, rules: [EmailRule(message: errorFormat)])
-        }
-        
+        super.init(title: title, detail: detail, image: image, animate: animate, promptPlaceHolder: promptPlaceHolder, promptPrefill: promptPrefill, dismisBtnLabel: dismisBtnLabel, actionBtnLabel: actionBtnLabel, actionSelector: actionSelector, actionExecutioner: actionExecutioner,rules:[RequiredRule.init(message: requiredErroMessager),EmailRule.init(message: emailFormatError)])
         
     }
     
